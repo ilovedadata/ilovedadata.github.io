@@ -11,20 +11,21 @@ The project is about the **"Italian powerball" (superenalotto)**, a game in whic
 The code is made up by 4 main sections:
 * **Functions section**: 
 
-   the dollars function returns an amount of dollars given a number; 
-   the binomial coefficient function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probability are not provided on the official Superenalotto website); 
+   the dollars function returns an amount of dollars given a number;
+   
+   the binomial coefficient function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probability are not provided on the official Superenalotto website);
+   
    the spent/won function returns the amount of money a user spends and wins given the times he plays and whether he plays a Superstar number or not.
    
+* **Inputs and Structures section**
+   the parameters for the drawings are initialized;
    
+   two dictionaries are created to store the drawings count;
    
-   
-   
-   
-   
-**Inputs and Structures section**
-5. here parameters are initialized;
-6. two dictionaries are created to store the drawings count,;
-7. three dataframes are created to store the probabilities and the prizes associated to a combination drawing, the numbers drawn and their count;
+   three dataframes are created to store the probabilities and the prizes associated to a combination drawing, the numbers drawn and their count;
+
+
+
 **Script section**
 **Plotting section**
 
