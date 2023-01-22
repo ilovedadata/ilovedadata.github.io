@@ -14,12 +14,11 @@ The code is made up by 4 main sections:
 2. the binomial coefficient function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probability are not provided on the official Superenalotto website); 
 3. the spent/won function returns the amount of money a user spends and wins given the times he plays and whether he plays a Superstar number or not.
 **Inputs and Structures section**
-1. here parameters are initialized;
-2. two dictionaries are created to store the drawings count,;
-3. three dataframes are created to store the probabilities and the prizes associated to a combination drawing, the numbers drawn and their count;
-* **Script section**
-* 
-* **Plotting section**
+5. here parameters are initialized;
+6. two dictionaries are created to store the drawings count,;
+7. three dataframes are created to store the probabilities and the prizes associated to a combination drawing, the numbers drawn and their count;
+**Script section**
+**Plotting section**
 
 
 | Just        | a           | table  |
