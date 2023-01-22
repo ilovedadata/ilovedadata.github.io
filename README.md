@@ -9,10 +9,16 @@ This website is about the projects I love doing in my free time and about the th
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 6 numbers (in fact, 8) are drawn and prizes are won depending on how many numbers you guessed right. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted.
 #### Code structure
 The code is made up by 4 main sections:
-* **Functions section**: 
-1. the dollars function returns an amount of dollars given a number; the binomial coefficient function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probability are not provided on the official Superenalotto website); the spent/won function returns the amount of money a user spends and wins given the times he plays and whether he plays a Superstar number or not.
-* **Inputs and Structures section**
+**Functions section**: 
+1. the dollars function returns an amount of dollars given a number; 
+2. the binomial coefficient function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probability are not provided on the official Superenalotto website); 
+3. the spent/won function returns the amount of money a user spends and wins given the times he plays and whether he plays a Superstar number or not.
+**Inputs and Structures section**
+1. here parameters are initialized;
+2. two dictionaries are created to store the drawings count,;
+3. three dataframes are created to store the probabilities and the prizes associated to a combination drawing, the numbers drawn and their count;
 * **Script section**
+* 
 * **Plotting section**
 
 
