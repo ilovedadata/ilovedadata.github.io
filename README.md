@@ -24,12 +24,6 @@ The code is made up by 4 main sections:
    
    three dataframes are created to store the probabilities and the prizes associated to a combination drawing, the numbers drawn and their count;
 
+* **Script section**
 
-
-**Script section**
-**Plotting section**
-
-
-| Just        | a           | table  |
-| ------------- |-------------| -----|
-| A      | B | C |
+* **Plotting section**
