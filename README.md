@@ -34,3 +34,6 @@ The code is made up by 4 main sections:
 * **Plotting section**
 
    Speaking of plots, the two histograms that follow store information about the times a user hit a combination and the frequency with which a number is drawn. As stated before, the "higher" the combination, the higher the prize won, the lower the probability that combination is drawn. 
+
+![Figure_1](https://user-images.githubusercontent.com/106730909/216785274-5954b222-6f0b-49f4-ae3b-47f932e4a928.png)
+
