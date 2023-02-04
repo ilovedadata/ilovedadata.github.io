@@ -16,6 +16,8 @@ The code is made up by 4 main sections:
    the binomial coefficient function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probabilities are not provided on the official Superenalotto website);
    
    the spent/won function returns the amount of money a user spends and wins given the times he plays and whether he plays a Superstar number or not.
+
+Finally, the user is asked whether he wants to play a **superstar number** or not.
    
 * **Inputs and Structures section**
 
