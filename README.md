@@ -21,14 +21,16 @@ The code is made up by 4 main sections:
    
 * **Inputs and Structures section**
 
-   the parameters for the drawings are initialized, for example: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
+   the **parameters** for the drawings are initialized, for example: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
    
-   two dictionaries are created to store the drawings count: the first dictionary is needed to count how many times a combination is drawn without considering the superstar number whilst the second dictionary counts the times a combination is drawn considering the superstar number. Obviously, the second dictionary will get values > 1 only when the user plays a superstar number;
+   **two dictionaries** are created to store the drawings count: the first dictionary is needed to count how many times a combination is drawn without considering the superstar number whilst the second dictionary counts the times a combination is drawn considering the superstar number. Obviously, the second dictionary will get values > 1 only when the user plays a superstar number;
    
-   three dataframes are created to store different data: the first stores the probabilities and the prizes associated to a combination drawing. The bigger the prize the lower the probability of winning and... wanna hear a (not so) **crazy stat**? `19/20 times you are going to lose`. The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
+   **three dataframes** are created to store different data: the first stores the probabilities and the prizes associated to a combination drawing. The bigger the prize the lower the probability of winning and... wanna hear a (not so) **crazy stat**? `19/20 times you are going to lose`. The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
    
 * **Script section**
 
    The script section is where the **magic** happens. Every ticket played by the user is compared to the drawn numbers. Both the user's ticket and the drawn numbers are **randomly** generated and, once they are compared, they are stored inside the dataframes created before so as to store data to generate **interesting plots** (I mean, who doesn't love plots? 📊).  
 
 * **Plotting section**
+
+   Speaking of plots, the two histograms that follow store information about the times a user hit a combination and the frequency with which a number is drawn. As stated before, the "higher" the combination, the higher the prize won, the lower the probability that combination is drawn. 
