@@ -27,7 +27,7 @@ The code is made up by 5 main sections:
    
 * **Structures section**
  
-   **two dictionaries** are created to store the drawings count: the first dictionary is needed to count how many times a combination is drawn without considering the superstar number whilst the second dictionary counts the times a combination is drawn considering the superstar number. Obviously, the second dictionary will get values > 1 only when the user plays a superstar number. These two dictionaries are used to create a dataframe (a fourth one, in addition to the ones we will speak about in a few minutes) that will count the times a combination was drawn as well as some probabilities about the combinations drawings. The following table represents the structure of the dataframe.
+   **two dictionaries** are created to store the drawings count: the first dictionary is needed to count how many times a combination is drawn without considering the superstar number whilst the second dictionary counts the times a combination is drawn considering the superstar number. Obviously, the second dictionary will get values > 1 only when the user plays a superstar number. These two dictionaries will be used later on to create a dataframe (a fourth one, in addition to the ones we will speak about in a few lines) that will count the times a combination was drawn as well as some probabilities about the combinations drawings. The following table represents the structure of the dataframe.
    
    | Combination | Wins_no_superstar | Wins_w_superstar | Act_Prob_no_superstar | Theo_Prob_no_superstar | Act_Prob_w_superstar | Theo_Prob_w_superstar |
    | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
