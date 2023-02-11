@@ -10,6 +10,7 @@ The project is about the **"Italian powerball" (superenalotto)**, a game in whic
 #### Code structure
 The code is made up by 5 main sections:
 * **Inputs Section**
+
    the **parameters** for the drawings are initialized, for example: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
 
 * **Functions section**:
