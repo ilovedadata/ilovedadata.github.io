@@ -37,7 +37,12 @@ The code is made up by 5 main sections:
    | 5+1 | 311000 | ... | ... | ... |
    | ...   | ... | ... | ... | ... |
    
-   The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
+   The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn as well as whether you won or not. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
+   
+   | Drawn Numbers | Your Numbers | Drawn Jolly | Your Jolly | Drawn Superstar | Your Superstar | Won? |
+   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+   | 1,2,3,4,5,6 | 1,2,3,4,5,6 | 16 | 18 | 16 | 18 | ... |
+   | ... | ... | ... | ... | ... | ... | ... |
    
 * **Script section**
 
@@ -57,4 +62,4 @@ In order to draw some conclusions, let us analyze the plot on the left. This plo
 This shows how unrealistic the expectation of winning big (or even winning small!) at the lottery is!
 
 #### Sources
-`All the data regarding probabiity and prizes come from the official superenalotto website.`
+`The data regarding probabiities and prizes come from the official superenalotto website.`
