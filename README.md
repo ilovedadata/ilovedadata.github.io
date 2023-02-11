@@ -11,7 +11,9 @@ The project is about the **"Italian powerball" (superenalotto)**, a game in whic
 The code is made up by 5 main sections:
 * **Inputs Section**
 
-   the **parameters** for the drawings are initialized, for example: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
+   the **parameters** for the drawings are initialized, namely: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
+   
+   Finally, the user is asked whether he wants to play a **superstar number** or not.
 
 * **Functions section**:
 
@@ -20,8 +22,8 @@ The code is made up by 5 main sections:
    the **binomial coefficient** function is needed to compute the probability of scoring 0 or 1 without a Superstar number (these probabilities are not provided on the official Superenalotto website);
    
    the **spent/won function** returns the amount of money a user spends and wins given the times he plays and whether he plays a Superstar number or not.
-
-   Finally, the user is asked whether he wants to play a **superstar number** or not.
+   
+   the **luck function** returns whether or not the user has been lucky when playing superenalotto.
    
 * **Structures section**
  
