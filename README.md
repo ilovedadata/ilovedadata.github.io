@@ -1,5 +1,5 @@
-# Hi everyone 👋, I am ilovedadata, a self-taught dev into data and programming 💻.
-This website is about the projects I love doing in my free time and about the things I learn while I struggle to become a better dev ✌️.
+# Hi everyone 👋, I am ilovedadata, I am a developer and I LOVE diving into data and programming 💻.
+This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 [Project 1](# project-1:-italian-superball-simulator)
 
 ## Project 1: Italian Superball simulator 💸 
