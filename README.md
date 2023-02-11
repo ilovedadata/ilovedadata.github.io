@@ -8,7 +8,10 @@ This website is about the projects I love doing in my free time and about the th
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eight number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
 #### Code structure
-The code is made up by 4 main sections:
+The code is made up by 5 main sections:
+* **Inputs Section**
+   the **parameters** for the drawings are initialized, for example: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
+
 * **Functions section**:
 
    the **dollars function** returns an amount of dollars given a number;
@@ -19,10 +22,8 @@ The code is made up by 4 main sections:
 
    Finally, the user is asked whether he wants to play a **superstar number** or not.
    
-* **Inputs and Structures section**
-
-   the **parameters** for the drawings are initialized, for example: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
-   
+* **Structures section**
+ 
    **two dictionaries** are created to store the drawings count: the first dictionary is needed to count how many times a combination is drawn without considering the superstar number whilst the second dictionary counts the times a combination is drawn considering the superstar number. Obviously, the second dictionary will get values > 1 only when the user plays a superstar number;
    
    **three dataframes** are created to store different data: the first stores the probabilities and the prizes associated to a combination drawing. The bigger the prize the lower the probability of winning and... wanna hear a (not so) **crazy stat**? `19/20 times you are going to lose`. The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
