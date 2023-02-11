@@ -31,11 +31,11 @@ The code is made up by 5 main sections:
    
    **three dataframes** are created to store different data: the first stores the probabilities and the prizes associated to a combination drawing. The bigger the prize the lower the probability of winning and... wanna hear a (not so) **crazy stat**? `19/20 times you are going to lose`. 
    
-   | Tables        | Are           | Cool  |
-   | ------------- |:-------------:| -----:|
-   | col 3 is      | right-aligned | $1600 |
-   | col 2 is      | centered      |   $12 |
-   | zebra stripes | are neat      |    $1 |
+   | Index | Prize_no_superstar | Prize_w_superstar | Prob_no_superstar | Prob_w_superstar |
+   | ------------- | ------------- | ------------- | ------------- | ------------- |
+   | 6   | 200000000 | ... | ... | ... |
+   | 5+1 | 311000 | ... | ... | ... |
+   | ...   | ... | ... | ... | ... |
    
    The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
    
