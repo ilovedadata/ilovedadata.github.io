@@ -31,22 +31,30 @@ The code is made up by 5 main sections:
    
    **three dataframes** are created to store different data: the first stores the probabilities and the prizes associated to a combination drawing. The bigger the prize the lower the probability of winning and... wanna hear a (not so) **crazy stat**? `19/20 times you are going to lose`. 
    
-   | Index | Prize_no_superstar | Prize_w_superstar | Prob_no_superstar | Prob_w_superstar |
+   | Combination | Prize_no_superstar | Prize_w_superstar | Prob_no_superstar | Prob_w_superstar |
    | ------------- | ------------- | ------------- | ------------- | ------------- |
    | 6   | 200000000 | 202000000 | 1,6e-9 | 1,8e-11 |
    | 5+1 | 311000 | ... | ... | ... |
    | ...   | ... | ... | ... | ... |
    
-   The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn as well as whether you won or not. The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
+   The second dataframe (in fact, there are two different dataframes that serve this purpose) is needed to store the numbers as they are drawn as well as whether you won or not. 
    
    | Drawn Numbers | Your Numbers | Drawn Jolly | Your Jolly | Drawn Superstar | Your Superstar | Won? |
    | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
    | 1,2,3,4,5,6 | 1,2,3,4,5,6 | 16 | 18 | 16 | 18 | ... |
    | ... | ... | ... | ... | ... | ... | ... |
    
+   The third dataframe counts the times a number is drawn as "normal" number, as a Jolly or as a Superstar.
+   
+   | Numbers | Number | Jolly | Superstar |
+   | ------------- | ------------- | ------------- | ------------- | 
+   | 1 | 20 | 8 | 2 |
+   | ... | ... | ... | ... |
+   | 80 | 50 | 60 | 2 |
+   
 * **Script section**
 
-   The script section is where the **magic** happens. Every ticket played by the user is compared to the drawn numbers. Both the user's ticket and the drawn numbers are **randomly** generated and, once they are compared, they are stored inside the dataframes created before so as to store data to generate **interesting plots** (I mean, who doesn't love plots? 📊).  
+   The script section is where the **magic** happens. Every ticket played by the user is compared to the drawn numbers. Both the user's ticket and the drawn numbers are **randomly** generated and, once they are compared, they are stored inside the dataframes created before so as to store data to generate **interesting plots** (I mean, who doesn't love plots?).  
 
 * **Plotting section**
 
@@ -54,7 +62,7 @@ The code is made up by 5 main sections:
 
 ![Figure_1](https://user-images.githubusercontent.com/106730909/216787470-9213e1fb-1553-4c15-9671-846cd141eb38.png)
 
-   As a design choice, combination from "2" upwards are shown, even though, when playing superstar, the user can win even scoring 1 or 0. Nonetheless, when computing the amount of money won by the user, such combinations (0+superstar, 1+superstar) are taken into account. Furthermore (and since it took me quite a bit of time it's only fair I state it 👀) a custom labelling process has been implemented in order to label the histogram plot on the left exactly above each and every histogram column, respecting the color palette. For what concerns the plot on the left, it will be useful to draw some conclusions. The plot on the right shows that no clear patterns are present in the drawing of numbers (which is random!), something that has been confirmed during the different simulations I performed.
+   As a design choice, combination from "2" upwards are shown, even though, when playing superstar, the user can win scoring just 1 or 0. Nonetheless, when computing the amount of money won by the user, such combinations (0+superstar, 1+superstar) are taken into account. Furthermore (and since it took me quite a bit of time it's only fair I state it 👀) a custom labelling process has been implemented in order to label the histogram plot on the left exactly above each and every histogram column, respecting the color palette. For what concerns the plot on the left, it will be useful to draw some conclusions. The plot on the right shows that no clear patterns are present in the drawing of numbers (which is random!), something that has been confirmed during the different simulations I performed.
 
 #### Conclusion
 
