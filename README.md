@@ -83,7 +83,7 @@ The structures and scripts used in this project can possibly be used in the futu
 `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita`
 
 
-## Project 2: Funky Stats about Naruto 💸 
+## Project 2: Funky Stats about Naruto :cyclone: 🦊 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Naruto` `#BeautifulSoup #Japanese` 
 
 #### Project description and goal
