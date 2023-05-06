@@ -7,6 +7,7 @@ This website is about some of the projects that I completed and the skills that 
 
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
+
 #### Code structure
 The code is made up by 5 main sections:
 * **Inputs Section**
@@ -74,6 +75,9 @@ The code is made up by 5 main sections:
 
 In order to draw some conclusions, let us analyze the plot on the left. This plot represents the "average" situation I found when playing with this simulator: a **lot** of times the user wins minor prizes (such as 2 or 3), rarely he scores a "4" (it happened to me at most 3 times during a simulation whilst playing the same amount of schedine we played in this simulation: needless to say, even scoring 3 "4" is not enough to cover the tickets expenses). In addition, in my experience the user never scored a 5 or a 6 and he/she never gained money: the amount of money spent on tickets has always been higher than the one gained through prizes. This becomes even more impressive when you consider the following: the plots above have been computed for a non-realistic (at least, I hope) situation: `a user that plays 70 tickets 3 times a week for a year, spending almost 17000$ in tickets, losing 12000$. What is even more crazy is that this user has been lucky: according to statistics, the times the user won (approx 0.06%) are higher than the ones he should have (approx 0.05%)`. 
 This shows how unrealistic the expectation of winning big (or even winning small!) at the lottery is!
+
+#### Possible future developments
+The structures and scripts used in this project can possibly be used in the future to simulate other kinds of gamble games/casino games. One such application could be creating a simulator for the "true" Powerball (i.e. the American one) or the roulette game.
 
 #### Sources
 `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita`
