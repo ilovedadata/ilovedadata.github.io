@@ -139,7 +139,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     **1.What is the highest delta between first and last appearance of a given character?**
     
-    blablablablabla
+    blablablablablabla
 
 #### Conclusion
 
