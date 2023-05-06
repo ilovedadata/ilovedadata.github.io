@@ -84,7 +84,7 @@ The structures and scripts used in this project can possibly be used in the futu
 
 
 ## Project 2: Funky Stats about Naruto 🦊 
-`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Naruto` `#BeautifulSoup #Japanese` 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup #Japanese` 
 
 #### Project description and goal
 The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
@@ -96,9 +96,23 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 - 6 What is the episode with the most characters present?
 
 #### Code structure
-* **Link scraping section**
+* **Links scraping section**
 
-   The idea of this section is to scrape the following webpage https://naruto.fandom.com/wiki/List_of_Animated_Media in order to create a dataframe containing the links to each and every naruto episode webpage, from which to extract the information needed to answer the questions above. The dataframe is structured as follows:
+   The idea of this section is to scrape the following webpage https://naruto.fandom.com/wiki/List_of_Animated_Media in order to create a dataframe containing the links to each and every naruto episode webpage, from which to extract the information needed to answer the questions above (the links are obtaining by using beautiful soup to get the `href elements` of the HTML webpage). The dataframe is structured as follows:
+   | Index | Naruto_Episode_link | # |
+   | ------------- | ------------- | ------------- | 
+   | 0 | /wiki/Enter:_Naruto_Uzumaki! | 1 |
+   | ... | ... | ... |
+   | 219 | /wiki/Departure_(episode) | 220 |
+
+   It is worth noticing that Boruto and Naruto Shippuden episodes are also present at the link above: they have been stored as well in two dataframes identical to the one above, so as to be available for future developments regarding this project.
+
+* **Episodes scraping section**
+
+   This section makes use of reverse engineering in order to scrape the contents of the links to each and every naruto episode webpage. In order to access the webpages, it is worth noticing how the links to them are structured:
+   _https://naruto.fandom.com/~~wiki/Homecoming_(episode)~~
+   _This is the static part_ and ~~This is the dynamic part~~, doesn't this ring a bell? Look at the dataframe of the link scraping section: we will need to loop through the "Naruto_Episode_link" column in order to visit each and every webpage and get the elements we are interested in, by inserting the strings we find there in the ~~dynamic~~ part of our link.
+  
    | Index | Naruto_Episode_link | # |
    | ------------- | ------------- | ------------- | 
    | 0 | /wiki/Enter:_Naruto_Uzumaki! | 1 |
