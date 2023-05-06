@@ -110,14 +110,25 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 * **Episodes scraping section**
 
    This section makes use of reverse engineering in order to scrape the contents of the links to each and every naruto episode webpage. In order to access the webpages, it is worth noticing how the links to them are structured:
-   _https://naruto.fandom.com/~~wiki/Homecoming_(episode)~~
-   _This is the static part_ and ~~This is the dynamic part~~, doesn't this ring a bell? Look at the dataframe of the link scraping section: we will need to loop through the "Naruto_Episode_link" column in order to visit each and every webpage and get the elements we are interested in, by inserting the strings we find there in the ~~dynamic~~ part of our link.
   
-   | Index | Naruto_Episode_link | # |
-   | ------------- | ------------- | ------------- | 
-   | 0 | /wiki/Enter:_Naruto_Uzumaki! | 1 |
-   | ... | ... | ... |
-   | 219 | /wiki/Departure_(episode) | 220 |
+   _https: //naruto . fandom . com/_ **wiki/Homecoming_(episode)**
+
+   _This is the static part_ and **this is the dynamic part**, doesn't this ring a bell? Looking at the dataframe of the link scraping section: we will need to loop through the "Naruto_Episode_link" column in order to visit each and every webpage and get the elements we are interested in, by inserting the strings we find there in the **dynamic** part of our link. 
+
+    The data we are interested in, at this stage, is the one that is found under the "Credits" section at the webpages of the episodes. Coding a webscraper has been one of the most challenging parts of this projects, as, in fact, not all the webpages have exactly the same structure. In the end, this is the dataframe we are left with:
+  
+   | Index | Character | Jap_dub_eng_char	| Jap_dub_jap_char |	Eng_dub | # |
+   | ------------- | ------------- | ------------- | ------------ | ------------ | ------------ | 
+   | 0 |	Naruto Uzumaki | Junko Takeuchi | 竹内 順子 |	Maile Flanagan |	1 |
+   | 1 |	Sasuke Uchiha | Noriaki Sugiyama | 杉山 紀彰 |	Yuri Lowenthal | 1 |
+   | 2 |	Sakura Haruno | Chie Nakamura | 中村 千絵 |	Kate Higgins |	1 |
+   | ... | ... | ... | ... | ... | ... |
+   | n | ... | ... | ... | ... | 220 |
+
+    This dataframe stores one row for each character present in a given episode. For instance: if Naruto Uzumaki is present in both the first and the last episode, we will find the Character "Naruto Uzumaki" both at # = 1 and at # = 220. Furthermore, each episode (#) has as much rows as the number of characters present in that specific episode.
+
+* **Data Cleaning section**
+    The dataframe above is the result of a data cleaning process that has been performed in two steps: first, the df has been stored in a csv file together with the "Links scraping df" from before; second, the df columns have been renamed and duplicates/useless columns have been dropped.
 
 #### Conclusion
 
