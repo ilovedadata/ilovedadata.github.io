@@ -3,7 +3,7 @@ This website is about some of the projects that I completed and the skills that 
 [Project 1](# project-1:-italian-superball-simulator)
 
 ## Project 1: Italian Superball simulator 💸 
-`#Python` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
 
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
@@ -83,14 +83,27 @@ The structures and scripts used in this project can possibly be used in the futu
 `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita`
 
 
-## Project 2: Funky Stats about Naruto :cyclone: 🦊 
+## Project 2: Funky Stats about Naruto 🦊 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Naruto` `#BeautifulSoup #Japanese` 
 
 #### Project description and goal
-The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
+The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
+- 1 What is the most present naruto character throughout the Anime? 
+- 2 Are there dubbers who dubbed more than one character? 
+- 3 Is there a single naruto character who has been dubbed by more people?
+- 4 What is the most used japanese kanji in the Japanese dubbers names?
+- 5 What is the highest delta between first and last appearance of a given character?
+- 6 What is the episode with the most characters present?
 
 #### Code structure
+* **Link scraping section**
 
+   The idea of this section is to scrape the following webpage https://naruto.fandom.com/wiki/List_of_Animated_Media in order to create a dataframe containing the links to each and every naruto episode webpage, from which to extract the information needed to answer the questions above. The dataframe is structured as follows:
+   | Index | Naruto_Episode_link | # |
+   | ------------- | ------------- | ------------- | 
+   | 0 | /wiki/Enter:_Naruto_Uzumaki! | 1 |
+   | ... | ... | ... |
+   | 219 | /wiki/Departure_(episode) | 220 |
 
 #### Conclusion
 
