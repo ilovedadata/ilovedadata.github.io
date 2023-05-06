@@ -92,7 +92,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 - 2 Are there dubbers who dubbed more than one character? 
 - 3 Is there a single naruto character who has been dubbed by more people?
 - 4 What is the most used japanese kanji in the Japanese dubbers names?
-- 5 What is the highest delta between first and last appearance of a given character?
+- 1 What is the highest delta between first and last appearance of a given character?
 - 6 What is the episode with the most characters present?
 
 #### Code structure
@@ -128,7 +128,16 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     This dataframe stores one row for each character present in a given episode. For instance: if Naruto Uzumaki is present in both the first and the last episode, we will find the Character "Naruto Uzumaki" both at # = 1 and at # = 220. Furthermore, each episode (#) has as much rows as the number of characters present in that specific episode.
 
 * **Data Cleaning section**
+ 
     The dataframe above is the result of a data cleaning process that has been performed in two steps: first, the df has been stored in a csv file together with the "Links scraping df" from before; second, the df columns have been renamed and duplicates/useless columns have been dropped.
+
+* **Funky stats section**
+ 
+    In this section we answer to the questions of the project description and goal paragraph.
+    
+    **1.What is the highest delta between first and last appearance of a given character?**
+    
+    blablablablabla
 
 #### Conclusion
 
@@ -137,4 +146,4 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 
 
 #### Sources
-`The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita`
+`The data comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media`
