@@ -1,7 +1,8 @@
 # Hi everyone 👋, I am ilovedadata, I am a developer and I LOVE diving into data and programming 💻.
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 [Project 1](# project-1:-italian-superball-simulator)
-[Project 1](# project-2:-funky-stats-about-naruto)
+
+[Project 2](# project-2:-funky-stats-about-naruto)
 
 ## Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
