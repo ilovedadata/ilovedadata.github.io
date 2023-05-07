@@ -147,6 +147,11 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     As expected, Naruto is the most present character: this makes sense since the Anime is about him. Unexpectedly, Sasuke appears less than half the times Naruto does: this is probably due to the same reason why his delta episodes is lower than expected. It is worth noticing that even characters that were on the top spot of the previous plot are not appearing as much as Naruto. Take Shikamaru for instance: even though he appears in both the first and last episodes (delta = 219), he appears a approx. third of the times Naruto does throughout the Anime.
     
     **3.What is the most used japanese kanji in the japanese voice actors names?**
+    This part has been one of the trickiest: I wanted a scatterplot to represent the count of the Japanese Kanji on the y axis, the kanji on the x axis and a third dimension as the bubble size. As the third dimension I chose the kanji strokes, not present in our df. This is why I scraped data from https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji, I created an additional dataframe and I then merged it with the df where I stored data about the Japanese dubbers name. For the sake of this exercise, the null strokes count have been filled with a mean strokes count. Note well: Matplotlib does not support japanese kanji as labels by default, this is why the x axis shows no labels: by installing the required fonts this should be easily fixable.
+    ![KanjiStrokes](https://user-images.githubusercontent.com/106730909/236668428-0abea422-df5c-455c-a35f-46e5559c38b0.png)
+
+    
+    田	is the most present characters, it appears 53 times, it means rice paddy and it is created by 5 strokes. It is present in the top left part of the plot above.
 
 #### Conclusion
 
