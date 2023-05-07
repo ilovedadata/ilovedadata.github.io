@@ -94,9 +94,9 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 - 1 What is the highest delta episodes between first and last appearance of a given character?
 - 2 What is the most present Naruto character throughout the Anime?
 - 3 What is the most used japanese kanji in the japanese voice actors names?
-- 6 What is the episode with the most characters present?
-- 2 Are there dubbers who dubbed more than one character? 
-- 3 Is there a single naruto character who has been dubbed by more people?
+- 4 Are there Naruto characters who have been dubbed by more than a dubber? (consider the most present 50 characters)
+- 5 What is the episode with the most characters? Make a top and a flop 10!
+- 6 What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs
 
 #### Code structure
 * **Links scraping section**
@@ -149,9 +149,14 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     **3.What is the most used japanese kanji in the japanese voice actors names?**
     This part has been one of the trickiest: I wanted a scatterplot to represent the count of the Japanese Kanji on the y axis, the kanji on the x axis and a third dimension as the bubble size. As the third dimension I chose the kanji strokes, not present in our df. This is why I scraped data from https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji, I created an additional dataframe and I then merged it with the df where I stored data about the Japanese dubbers name. For the sake of this exercise, the null strokes count have been filled with a mean strokes count. Note well: Matplotlib does not support japanese kanji as labels by default, this is why the x axis shows no labels: by installing the required fonts this should be easily fixable.
     ![KanjiStrokes](https://user-images.githubusercontent.com/106730909/236668428-0abea422-df5c-455c-a35f-46e5559c38b0.png)
-
-    
     田	is the most present characters, it appears 53 times, it means rice paddy and it is created by 5 strokes. It is present in the top left part of the plot above.
+    
+    **4. Are there Naruto characters who have been dubbed by more than a dubber? (consider the most present 50 characters)?**
+    According to my analysis, the only character that changed dubber between the 50 most present characters in the Anime is the Konoha Anbu. This makes sense since the Anbu are a group: the Konoha Anbu appearing at different times in the Anime might be different one, thus requiring a different voice actor.
+    
+    **5. What is the episode with the most characters? Make a top and a flop 10!**
+    
+    **6. What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs**
 
 #### Conclusion
 
