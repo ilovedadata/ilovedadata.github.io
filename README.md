@@ -86,16 +86,17 @@ The structures and scripts used in this project can possibly be used in the futu
 ## 
 
 ## Project 2: Funky Stats about Naruto 🦊 
-`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup #Japanese` 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
+ #Japanese` 
 
 #### Project description and goal
 The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
-- 1 What is the most present naruto character throughout the Anime? 
+- 1 What is the highest delta episodes between first and last appearance of a given character?
+- 2 What is the most present Naruto character throughout the Anime?
+- 3 What is the most used japanese kanji in the japanese voice actors names?
+- 6 What is the episode with the most characters present?
 - 2 Are there dubbers who dubbed more than one character? 
 - 3 Is there a single naruto character who has been dubbed by more people?
-- 4 What is the most used japanese kanji in the Japanese dubbers names?
-- 1 What is the highest delta between first and last appearance of a given character?
-- 6 What is the episode with the most characters present?
 
 #### Code structure
 * **Links scraping section**
@@ -137,9 +138,15 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
  
     In this section we answer to the questions of the project description and goal paragraph.
     
-    **1.What is the highest delta between first and last appearance of a given character?**
+    **1.What is the highest delta episodes between first and last appearance of a given character?**
+    ![MaxMinAppearance](https://user-images.githubusercontent.com/106730909/236666444-13798f95-249f-4c63-b4d7-6a5167b03cc7.png)
+    Unsurprisingly, main characters such as Shikamaru, Iruka, Ino, Sakura and Naruto himself lead the chart. Surprisingly enough for me, Sasuke is not in the top spot: this is probably due to Sasuke departure from Team Kakashi. 
     
-    blablablablablabla
+    **2.What is the most present Naruto character throughout the Anime?**
+    ![MostPresentCharacter](https://user-images.githubusercontent.com/106730909/236666883-297dad82-81f0-4a8c-ac1e-0346ada4034f.png)
+    As expected, Naruto is the most present character: this makes sense since the Anime is about him. Unexpectedly, Sasuke appears less than half the times Naruto does: this is probably due to the same reason why his delta episodes is lower than expected. It is worth noticing that even characters that were on the top spot of the previous plot are not appearing as much as Naruto. Take Shikamaru for instance: even though he appears in both the first and last episodes (delta = 219), he appears a approx. third of the times Naruto does throughout the Anime.
+    
+    **3.What is the most used japanese kanji in the japanese voice actors names?**
 
 #### Conclusion
 
