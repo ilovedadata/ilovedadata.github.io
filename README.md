@@ -164,6 +164,10 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     ![TopFlop10](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3b0249ab-ed51-46ef-b1e1-0c0b821932fc)
     
     **6. What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs**
+    
+    Once again a tricky question to answer: in order to do so, the plots of the episodes were scraped from https://en.wikipedia.org/wiki/Naruto in a similar fashion to what was done before for extracting information about the characters in each episodes. Once stored, the plots have then been splitted into words, from which English stopwords and punctuation signs have been excluded. 
+    ![words in plots](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/331c5728-66ea-4fef-8bd2-2dc0ffcd1358)
+    Unsurprisingly, 4 out of the top 5 words are names of the Anime main characters, namely Naruto, Sasuke, Lee, Sakura. The first non-first-name words that are found are team, ninja, attack, battle and fight which, once again, makes sense: the anime is about the ninja world, ninjas are organized in teams and fights are pretty much centra throughout the whole anime.
 
 #### Conclusion
 
@@ -172,4 +176,6 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 
 
 #### Sources
-`The data comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media`
+`The data comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media, 
+The kanji stroke counts are found at https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji,
+The plots of the episodes of the anime are at https://en.wikipedia.org/wiki/Naruto`
