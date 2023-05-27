@@ -176,12 +176,12 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     Once stored, the plots have then been splitted into list of strings, from which English stopwords and punctuation signs have been excluded. In the end, plotting the results meant obtaining the following plot:
     ![words in plots](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/331c5728-66ea-4fef-8bd2-2dc0ffcd1358)
-    Unsurprisingly, 4 out of the top 5 words are names of the Anime main characters, namely Naruto, Sasuke, Lee, Sakura. The first non-first-name words that are found are team, ninja, attack, battle and fight which, once again, makes sense: the anime is about the ninja world, ninjas are organized in teams and fights are pretty much central throughout the whole anime.
+    Unsurprisingly, 4 out of the top 5 words are first names of the Anime main characters, namely Naruto, Sasuke, Lee, Sakura. The first non-first-name words that are found are team, ninja, attack, battle and fight which, once again, makes sense: the anime is about the ninja world, ninjas are organized in teams and fights are pretty much central throughout the whole anime.
 
 #### Possible future developments
 The code and the structures that were used to analyze the data about the Anime can be easily adapted to perform other analyses of this kind. For instance, one could go on and analyze the episodes for Naruto Shippuden and Boruto, which are both sequels to Naruto the anime. In fact, I already stored information about the characters and the dubbers of these two Animes in two dataframes (structured as the one that is found in the Episodes scraping section) and, in the future, I might come back to expand the analysis that I performed on the first anime to both Shippuden and Boruto.
 
 #### Sources
-- `The data about the characters and their dubbers in each episode comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media` 
+- `The data about the characters and their dubbers in each episode comes from the Naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media` 
 - `The kanji stroke counts are found at https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji`
 - `The plots of the episodes of the anime are at https://en.wikipedia.org/wiki/Naruto`
