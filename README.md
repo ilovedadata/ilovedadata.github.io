@@ -160,7 +160,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     **5. What is the episode with the most characters? Make a top and a flop 10!**
     
-    To answer this question I used the dataframe that stores the episodes and Pandas aggregation functions in order to count the number of characters for each of the episodes. The following picture shows the top and flop 10 episodes in terms of characters count, once again obtained by combining Pandas aggfuncs and Matplotlib.
+    To answer this question I used the dataframe that stores the episodes and the Pandas groupby function. The latter one is necessary in order to count the number of characters for each of the episodes. The following picture shows the top and flop 10 episodes in terms of characters count.
     ![TopFlop10](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3b0249ab-ed51-46ef-b1e1-0c0b821932fc)
     
     **6. What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs**
