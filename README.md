@@ -169,11 +169,10 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
   
    | Index | Plot | 
    | ------------- | ------------- | 
-   | 0 |	Lorem Ipsum dolor sit | 
-   | 1 |	sit amet Lorem Ipsum |
-   | 2 |	dolor sit amet Lorem | 
-   | ... |	... | 
-   | 219 |	Lorem Ipsum dolor sit | 
+   | 0 |	Naruto Uzumaki is a twelve-year-old ninja livi... | 
+   | 1 |	While Naruto gets into an argument with Hiruze... |
+   | ... | ... | 
+   | 219 | The battle concludes with Gaara killing Seimei... | 
     
     Once stored, the plots have then been splitted into words, from which English stopwords and punctuation signs have been excluded. In the end, plotting the results meant obtaining the following plot:
     ![words in plots](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/331c5728-66ea-4fef-8bd2-2dc0ffcd1358)
