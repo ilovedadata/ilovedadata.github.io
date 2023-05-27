@@ -182,6 +182,6 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 The code and the structures that were used to analyze the data about the Anime can be easily adapted to perform other analyses of this kind. For instance, one could go on and analyze the episodes for Naruto Shippuden and Boruto, which are both sequels to Naruto the anime. In fact, I already stored information about the characters and the dubbers of these two Animes in two dataframes (structured as the one that is found in the Episodes scraping section) and, in the future, I might come back to expand the analysis that I performed on the first anime to both Shippuden and Boruto.
 
 #### Sources
-- `The data comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media` 
+- `The data about the characters and their dubbers in each episode comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media` 
 - `The kanji stroke counts are found at https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji`
 - `The plots of the episodes of the anime are at https://en.wikipedia.org/wiki/Naruto`
