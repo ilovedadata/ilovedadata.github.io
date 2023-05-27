@@ -165,7 +165,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     **6. What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs**
     
-    A tricky question to answer: in order to do so, the plots of the episodes were scraped from https://en.wikipedia.org/wiki/Naruto in a similar fashion to what was done before for extracting information about the characters in each episodes. The dataframe is structured as follows:
+    A tricky question to answer: in order to do so, the plots of the episodes were scraped from https://en.wikipedia.org/wiki/Naruto in a similar fashion to what was done before for extracting information about the characters and dubbers in each episode. The dataframe is structured as follows:
   
    | Index | Plot | 
    | ------------- | ------------- | 
@@ -174,15 +174,12 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
    | ... | ... | 
    | 219 | The battle concludes with Gaara killing Seimei... | 
     
-    Once stored, the plots have then been splitted into words, from which English stopwords and punctuation signs have been excluded. In the end, plotting the results meant obtaining the following plot:
+    Once stored, the plots have then been splitted into list of strings, from which English stopwords and punctuation signs have been excluded. In the end, plotting the results meant obtaining the following plot:
     ![words in plots](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/331c5728-66ea-4fef-8bd2-2dc0ffcd1358)
     Unsurprisingly, 4 out of the top 5 words are names of the Anime main characters, namely Naruto, Sasuke, Lee, Sakura. The first non-first-name words that are found are team, ninja, attack, battle and fight which, once again, makes sense: the anime is about the ninja world, ninjas are organized in teams and fights are pretty much central throughout the whole anime.
 
-#### Conclusion
-
-
 #### Possible future developments
-
+The code and the structures that were used to analyze the data about the Anime can be easily adapted to perform other analyses of this kind. For instance, one could go on and analyze the episodes for Naruto Shippuden and Boruto, which are both sequels to Naruto the anime. In fact, I already stored information about the characters and the dubbers of these two Animes in two dataframes (structured as the one that is found in the Episodes scraping section) and, in the future, I might come back to expand the analysis that I performed on the first anime to both Shippuden and Boruto.
 
 #### Sources
 `The data comes from the naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media, 
