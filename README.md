@@ -190,15 +190,20 @@ The code and the structures that were used to analyze the data about the Anime c
 
 ## 
 
-## Project 3: House terminal inventory system 🦊 
-`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
- `#Japanese` 
+## Project 3: House terminal inventory system 🏠
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
  
  #### Project description and goal
-The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
-- 1 What is the highest delta episodes between first and last appearance of a given character?
-- 2 What is the most present Naruto character throughout the Anime?
-- 3 What is the most used japanese kanji in the japanese voice actors names?
-- 4 Are there Naruto characters who have been dubbed by more than a dubber? (consider the most present 50 characters)
-- 5 What is the episode with the most characters? Make a top and a flop 10!
-- 6 What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs
+The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project has been creating an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words.
+
+#### Code structure
+The code is made up by 5 main sections:
+* **Inputs Section**
+
+   the **parameters** for the drawings are initialized, namely: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
+   
+   Finally, the user is asked whether he wants to play a **superstar number** or not.
+
+* **Functions section**:
+
+   the **dollars function** returns an amount of dollars given a number;
