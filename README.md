@@ -7,6 +7,8 @@ This website is about some of the projects that I completed and the skills that 
 
 [Project 2](# project-2:-funky-stats-about-naruto)
 
+[Project 2](# project-3:-house-terminal-inventory-system)
+
 ## Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
 
@@ -89,7 +91,7 @@ The structures and scripts used in this project can possibly be used in the futu
 
 ## Project 2: Funky Stats about Naruto 🦊 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
- #Japanese` 
+ `#Japanese` 
 
 #### Project description and goal
 The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
@@ -185,3 +187,18 @@ The code and the structures that were used to analyze the data about the Anime c
 - `The data about the characters and their dubbers in each episode comes from the Naruto fandom website https://naruto.fandom.com/wiki/List_of_Animated_Media` 
 - `The kanji stroke counts are found at https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji`
 - `The plots of the episodes of the anime are at https://en.wikipedia.org/wiki/Naruto`
+
+## 
+
+## Project 3: House terminal inventory system 🦊 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
+ `#Japanese` 
+ 
+ #### Project description and goal
+The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
+- 1 What is the highest delta episodes between first and last appearance of a given character?
+- 2 What is the most present Naruto character throughout the Anime?
+- 3 What is the most used japanese kanji in the japanese voice actors names?
+- 4 Are there Naruto characters who have been dubbed by more than a dubber? (consider the most present 50 characters)
+- 5 What is the episode with the most characters? Make a top and a flop 10!
+- 6 What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs
