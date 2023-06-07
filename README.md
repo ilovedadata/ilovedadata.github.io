@@ -197,13 +197,11 @@ The code and the structures that were used to analyze the data about the Anime c
 The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project has been creating an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words.
 
 #### Code structure
-The code is made up by 5 main sections:
-* **Inputs Section**
+The code is split into several functions, each having a specific goal:
+* **create_a_backup**
 
-   the **parameters** for the drawings are initialized, namely: the amount of numbers that can be drawn, the number of tickets played by the user and the number of drawings in which the user wants to play his number of tickets;
-   
-   Finally, the user is asked whether he wants to play a **superstar number** or not.
+   As its name suggests, this function is used for disaster recovering: as soon as the code starts running, a backup of the inventory is created so that, if needed, it can be reloaded. The inventory is stored as a **json** file and the handling of the json files is carried out through the **with**-**open** construct;
 
-* **Functions section**:
+* **load_the_dict**:
 
-   the **dollars function** returns an amount of dollars given a number;
+   Lorem ipsum;
