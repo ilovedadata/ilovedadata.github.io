@@ -229,3 +229,7 @@ The code is split into several functions, each having a specific goal:
 * **save_the_dict**.
 
    This functions saves the product dictionary as a json file.
+
+The user can call the functions above from a menu that opens whenever he runs the script from a terminal: each function is associated to a number. For example, the menu clearly states that, whenever the user inputs 4, he can check the items to buy.
+Additionally, if the user enters the correct number, which of course must remain **secret**, he can start a fully functional **fallout 76 terminal**. The terminal script is a file of its own, which is then called by the "inventory script" when the correct input is provided.
+
