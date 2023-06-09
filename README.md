@@ -193,7 +193,7 @@ The code and the structures that were used to analyze the data about the Anime c
 ## Project 3: House terminal inventory system 🏠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
  
- #### Project description and goal
+#### Project description and goal
 The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project has been creating an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
 
 #### Code structure
@@ -239,4 +239,8 @@ The terminal has been implemented as follows:
 * The words are then displayed to the user and associated to their key so that, whenever the user wants to guess the password, it is enough for him to input the number (i.e. the key) that he finds near the word;
 * Whenever the user types a number corresponding to a word, the terminal prints the amount of letter that that word has in common with the password. For example, user input --> HOME, password --> COME: likeness = 2.
 
+The following picture shows how the Fallout terminal appears to the user.
 ![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3d9c1c99-4075-45ac-9761-4225fe331013)
+
+#### Possible future developments
+A possible future development might be deploying this script as an app for my mobile, so as to be able to run it from a more comfortable "access point": I am still lazy and turning on my PC takes some effort (:smile:)
