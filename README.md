@@ -194,13 +194,7 @@ The code and the structures that were used to analyze the data about the Anime c
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
  
  #### Project description and goal
-The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project has been creating an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. The products are stored in a dictionary which has the following strcuture:
-product_dict = {
-    '1': {'name': 'product1', 'qty': 3, 'price': 3.60, 'category': 'beauty & personal'},
-    '2': {'name': 'product2', 'qty': 2, 'price': 2.60, 'category': 'food'},
-    ...
-    '3': {'name': 'product88', 'qty': 2, 'price': 2.60, 'category': 'food'},
-}
+The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project has been creating an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
 
 #### Code structure
 The code is split into several functions, each having a specific goal:
@@ -210,4 +204,28 @@ The code is split into several functions, each having a specific goal:
 
 * **load_the_dict**.
 
-   This functions loads the json file where the data is stored. The function takes a parameter as an input: "backup". When backup is = "yes", the backup json file is loaded (the one created by create_a_backup), otherwise the standard inventory file is loaded
+   This functions loads the json file where the data is stored. The function takes a parameter as an input: "backup". When backup is = "yes", the backup json file is loaded (the one created by create_a_backup), otherwise the standard inventory file is loaded;
+
+* **add_an_item**.
+
+   This functions takes as an input the product dictionary and returns the updated one, by requiring the user to input the 4 features that, in the dictionary, define a product: name, quantity, price and category;
+
+* **display_items_from_dict**.
+
+   Within this functions, thanks to Pandas, the product dictionary is converted to a Pandas DataFrame. When calling this function, it is possible to provide the parameter "mode", set to "index" by default. When mode is equal to "name", the DataFrame rows are ordered by the name of the items;
+
+* **delete_an_item**.
+
+   When this function is called, the user is asked to provide the id of the product he wants to delete. Once the key provided, the desired element is removed from the dictionary. After the deletion of the item, the dictionary might have non-consecutive indices (actually it is almost certain: only if you delete the first or the last item the remaining ones will have consecutive indices). Because of this, within this function the dictionary is reindexed;
+
+* **update_info**.
+
+   This function does what its name suggests: it asks the user to provide the id (i.e. the index) of the item of which he wants to update an info and then proceeds to do so;
+
+* **items_to_buy**.
+
+   This function creates a Pandas DataFrame from the product dictionary and makes use of the aggregation functions to compute the amount of money the user will have to spend to restock its inventory. Furthermore, a list of items to buy is provided to the user;
+
+* **save_the_dict**.
+
+   This functions saves the product dictionary as a json file.
