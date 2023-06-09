@@ -232,8 +232,11 @@ The code is split into several functions, each having a specific goal:
 
 The user can call the functions above from a menu that opens whenever he runs the script from a terminal: each function is associated to a number. For example, the menu clearly states that, whenever the user inputs 4, he can check the items to buy.
 
-Additionally, if the user enters the correct number, which of course must remain **secret**, he can start a fully functional **fallout 4 terminal** (one of the coolest minigames I ever played in a videogame). The terminal script is a file of its own, which is then called by the "inventory script" when the correct input is provided.
-The terminal works as follows:
-* A list of 10 random words of a given length is drawn from a bigger list (the drawn words must be of the same length); 
+Additionally, if the user enters the correct number, which of course must remain **secret**, he can start a fully functional **fallout 4 terminal** (one of the coolest minigames I ever played in a videogame). For the non-Fallout players out there, the goal of the user in this minigame is to guess the password that is being used to keep him locked out from the terminal. To do so, he has 4 chances. The terminal script is a file of its own, which is then called by the "inventory script" when the correct input is provided.
+The terminal has been implemented as follows:
+* A list (actually a dictionary) of 10 random words of a given length (which can be chosen) is drawn from a bigger list (the drawn words must be of the same length); 
 * To make it a "real" fallout experience, words are "wrapped" in punctuation signs (whoever played Fallout knows what I am talking about. Implementing this feature has been very tricky: ask me about it!); 
+* The words are then displayed to the user and associated to their key so that, whenever the user wants to guess the password, it is enough for him to input the number (i.e. the key) that he finds near the word;
+* Whenever the user types a number corresponding to a word, the terminal prints the amount of letter that that word has in common with the password. For example, user input --> HOME, password --> COME: likeness = 2.
+
 ![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3d9c1c99-4075-45ac-9761-4225fe331013)
