@@ -231,5 +231,9 @@ The code is split into several functions, each having a specific goal:
    This functions saves the product dictionary as a json file.
 
 The user can call the functions above from a menu that opens whenever he runs the script from a terminal: each function is associated to a number. For example, the menu clearly states that, whenever the user inputs 4, he can check the items to buy.
-Additionally, if the user enters the correct number, which of course must remain **secret**, he can start a fully functional **fallout 76 terminal**. The terminal script is a file of its own, which is then called by the "inventory script" when the correct input is provided.
 
+Additionally, if the user enters the correct number, which of course must remain **secret**, he can start a fully functional **fallout 4 terminal** (one of the coolest minigames I ever played in a videogame). The terminal script is a file of its own, which is then called by the "inventory script" when the correct input is provided.
+The terminal works as follows:
+* A list of 10 random words of a given length is drawn from a bigger list (the drawn words must be of the same length); 
+* To make it a "real" fallout experience, words are "wrapped" in punctuation signs (whoever played Fallout knows what I am talking about. Implementing this feature has been very tricky: ask me about it!); 
+![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3d9c1c99-4075-45ac-9761-4225fe331013)
