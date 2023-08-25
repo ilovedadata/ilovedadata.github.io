@@ -7,7 +7,7 @@ This website is about some of the projects that I completed and the skills that 
 
 [Project 2](# project-2:-funky-stats-about-naruto)
 
-[Project 2](# project-3:-house-terminal-inventory-system)
+[Project 3](# project-3:-house-terminal-inventory-system)
 
 ## Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
@@ -163,8 +163,8 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     **5. What is the episode with the most characters? Make a top and a flop 10!**
     
     To answer this question I used the dataframe that stores the episodes and the Pandas groupby function. The latter one is necessary in order to count the number of characters for each of the episodes. The following picture shows the top and flop 10 episodes in terms of characters count.
-    ![TopFlop10](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3b0249ab-ed51-46ef-b1e1-0c0b821932fc)
-    
+    ![TopFlop10](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/cded28a0-822e-4209-9fcf-aff7331c4661)
+
     **6. What is the most present word in Naruto plots? Exclude English stopwords and punctuation signs**
     
     A tricky question to answer: in order to do so, the plots of the episodes were scraped from https://en.wikipedia.org/wiki/Naruto in a similar fashion to what was done before for extracting information about the characters and dubbers in each episode. The dataframe is structured as follows:
@@ -177,8 +177,8 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
    | 219 | The battle concludes with Gaara killing Seimei... | 
     
     Once stored, the plots have then been splitted into list of strings, from which English stopwords and punctuation signs have been excluded. In the end, plotting the results meant obtaining the following plot:
-    ![words in plots](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/331c5728-66ea-4fef-8bd2-2dc0ffcd1358)
-    Unsurprisingly, 4 out of the top 5 words are first names of the Anime main characters, namely Naruto, Sasuke, Lee, Sakura. The first non-first-name words that are found are team, ninja, attack, battle and fight which, once again, makes sense: the anime is about the ninja world, ninjas are organized in teams and fights are pretty much central throughout the whole anime.
+    ![words in plots](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/1ade21ac-8452-42a3-bcf0-0f86ecdb228a)
+Unsurprisingly, 4 out of the top 5 words are first names of the Anime main characters, namely Naruto, Sasuke, Lee, Sakura. The first non-first-name words that are found are team, ninja, attack, battle and fight which, once again, makes sense: the anime is about the ninja world, ninjas are organized in teams and fights are pretty much central throughout the whole anime.
 
 #### Possible future developments
 The code and the structures that were used to analyze the data about the Anime can be easily adapted to perform other analyses of this kind. For instance, one could go on and analyze the episodes for Naruto Shippuden and Boruto, which are both sequels to Naruto the anime. In fact, I already stored information about the characters and the dubbers of these two Animes in two dataframes (structured as the one that is found in the Episodes scraping section) and, in the future, I might come back to expand the analysis that I performed on the first anime to both Shippuden and Boruto.
@@ -240,7 +240,7 @@ The terminal has been implemented as follows:
 * Whenever the user types a number corresponding to a word, the terminal prints the amount of letters that that word has in common with the password. For example, user input --> HOME, password --> COME: likeness = 3.
 
 The following picture shows how the Fallout terminal appears to the user.
-![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3d9c1c99-4075-45ac-9761-4225fe331013)
+![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/64b06a75-5c4f-4dc7-a7a7-b08104bfe0a3)
 
 #### Possible future developments
 A possible future development might be deploying this script as an app for my mobile, so as to be able to run it from a more comfortable "access point": I am still lazy and turning on my PC takes some effort (:smile:)
