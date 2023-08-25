@@ -105,7 +105,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 #### Code structure
 * **Links scraping section**
 
-   The idea of this section is to scrape the following webpage https://naruto.fandom.com/wiki/List_of_Animated_Media in order to create a dataframe containing the links to each and every naruto episode webpage, from which to extract the information needed to answer the questions above (the links are obtaining by using beautiful soup to get the `href elements` of the HTML webpage). The dataframe is structured as follows:
+   The idea of this section is to scrape the following webpage https://naruto.fandom.com/wiki/List_of_Animated_Media in order to create a dataframe containing the links to each and every naruto episode webpage, from which to extract the information needed to answer the questions above (the links are obtained by using beautiful soup to get the `href elements` of the HTML webpage). The dataframe is structured as follows:
    | Index | Naruto_Episode_link | # |
    | ------------- | ------------- | ------------- | 
    | 0 | /wiki/Enter:_Naruto_Uzumaki! | 1 |
@@ -158,7 +158,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     **4. Are there Naruto characters who have been dubbed by more than a dubber? (consider the most present 50 characters)?**
     
-    According to my analysis, the only character that changed dubber between the 50 most present characters in the Anime is the Konoha Anbu. This makes sense since the Anbu are a group: the Konoha Anbu appearing at different times in the Anime might be different one, thus requiring a different voice actor.
+    According to my analysis, the only character that changed dubber between the 50 most present characters in the Anime is the Konoha Anbu. This makes sense since the Anbu are a group: the Konoha Anbu appearing at different times in the Anime might be a different one, thus requiring a different voice actor.
     
     **5. What is the episode with the most characters? Make a top and a flop 10!**
     
@@ -194,7 +194,7 @@ The code and the structures that were used to analyze the data about the Anime c
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
  
 #### Project description and goal
-The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project has been creating an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
+The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project is to create an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
 
 #### Code structure
 The code is split into several functions, each having a specific goal:
@@ -220,7 +220,7 @@ The code is split into several functions, each having a specific goal:
 
 * **update_info**.
 
-   This function does what its name suggests: it asks the user to provide the id (i.e. the index) of the item of which he wants to update an info and then proceeds to do so;
+   This function does what its name suggests: it asks the user to provide the id (i.e. the index) of the item of which he wants to update an info of and then proceeds to do so;
 
 * **items_to_buy**.
 
@@ -235,9 +235,9 @@ The user can call the functions above from a menu that opens whenever he runs th
 Additionally, if the user enters the correct number, which of course must remain **secret**, he can start a fully functional **fallout 4 terminal** (one of the coolest minigames I ever played in a videogame). For the non-Fallout players out there, the goal of the user in this minigame is to guess the password that is being used to keep him locked out from the terminal. To do so, he has 4 chances. The terminal script is a file of its own, which is then called by the "inventory script" when the correct input is provided.
 The terminal has been implemented as follows:
 * A list (actually a dictionary) of 10 random words of a given length (which can be chosen) is drawn from a bigger list (the drawn words must be of the same length); 
-* To make it a "real" fallout experience, words are "wrapped" in punctuation signs (whoever played Fallout knows what I am talking about. Implementing this feature has been very tricky: ask me about it!); 
+* To make it a "real" fallout experience, words are "wrapped" in punctuation signs (whoever played Fallout knows what I am talking about. Implementing this feature has been very tricky); 
 * The words are then displayed to the user and associated to their key so that, whenever the user wants to guess the password, it is enough for him to input the number (i.e. the key) that he finds near the word;
-* Whenever the user types a number corresponding to a word, the terminal prints the amount of letter that that word has in common with the password. For example, user input --> HOME, password --> COME: likeness = 2.
+* Whenever the user types a number corresponding to a word, the terminal prints the amount of letters that that word has in common with the password. For example, user input --> HOME, password --> COME: likeness = 3.
 
 The following picture shows how the Fallout terminal appears to the user.
 ![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3d9c1c99-4075-45ac-9761-4225fe331013)
