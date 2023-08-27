@@ -106,6 +106,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
 * **Links scraping section**
 
    The idea of this section is to scrape the following webpage https://naruto.fandom.com/wiki/List_of_Animated_Media in order to create a dataframe containing the links to each and every naruto episode webpage, from which to extract the information needed to answer the questions above (the links are obtained by using beautiful soup to get the `href elements` of the HTML webpage). The dataframe is structured as follows:
+  
    | Index | Naruto_Episode_link | # |
    | ------------- | ------------- | ------------- | 
    | 0 | /wiki/Enter:_Naruto_Uzumaki! | 1 |
