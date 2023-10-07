@@ -248,5 +248,5 @@ A possible future development might be deploying this script as an app for my mo
 
 ## Annex: Old projects in Scikit-Learn
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` 
-https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git
-https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git
+* [Diabetes dataset: Linear Regression](https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git)
+* [Diabetes dataset: Polynomial and Elastic Net Regression](https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git)
