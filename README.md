@@ -3,11 +3,11 @@ This website is about some of the projects that I completed and the skills that 
 
 # Index
 
-[Project 1](## project-1:-italian-superball-simulator)
+[Project 1](##project-1:-italian-superball-simulator)
 
-[Project 2](## project-2:-funky-stats-about-naruto)
+[Project 2](##project-2:-funky-stats-about-naruto)
 
-[Project 3](## project-3:-house-terminal-inventory-system)
+[Project 3](##project-3:-house-terminal-inventory-system)
 
 ## Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
@@ -247,6 +247,6 @@ The following picture shows how the Fallout terminal appears to the user.
 A possible future development might be deploying this script as an app for my mobile, so as to be able to run it from a more comfortable "access point": I am still lazy and turning on my PC takes some effort (:smile:)
 
 ## Annex: Old projects in Scikit-Learn
-`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Scikit Learn` 
 * [Diabetes dataset: Linear Regression](https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git)
 * [Diabetes dataset: Polynomial and Elastic Net Regression](https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git)
