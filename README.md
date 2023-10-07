@@ -3,11 +3,11 @@ This website is about some of the projects that I completed and the skills that 
 
 # Index
 
-[Project 1](# project-1:-italian-superball-simulator)
+[Project 1](## project-1:-italian-superball-simulator)
 
-[Project 2](# project-2:-funky-stats-about-naruto)
+[Project 2](## project-2:-funky-stats-about-naruto)
 
-[Project 3](# project-3:-house-terminal-inventory-system)
+[Project 3](## project-3:-house-terminal-inventory-system)
 
 ## Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
