@@ -5,7 +5,7 @@ This website is about some of the projects that I completed and the skills that 
 
 [Project 1](##project-1:-italian-superball-simulator)
 
-[Project 2](##Project-2:-Funky-Stats-about-Naruto)
+[Project 2](#Project-2:-Funky-Stats-about-Naruto)
 
 [Project 3](##project-3:-house-terminal-inventory-system)
 
@@ -89,7 +89,7 @@ The structures and scripts used in this project can possibly be used in the futu
 - `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita` 
 ## 
 
-## Project 2: Funky Stats about Naruto 🦊 
+# Project 2: Funky Stats about Naruto 🦊 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
  `#Japanese` 
 
