@@ -1,15 +1,7 @@
 # Hi everyone 👋, I am ilovedadata, I am a developer and I LOVE diving into data and programming 💻.
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 
-# Index
-
-[Project 1](##project-1:-italian-superball-simulator)
-
-[Project 2](#Project-2-:-Funky-Stats-about-Naruto)
-
-[Project 3](##project-3:-house-terminal-inventory-system)
-
-## Project 1: Italian Superball simulator 💸 
+# Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
 
 #### Project description and goal
@@ -191,7 +183,7 @@ The code and the structures that were used to analyze the data about the Anime c
 
 ## 
 
-## Project 3: House terminal inventory system 🏠
+# Project 3: House terminal inventory system 🏠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
  
 #### Project description and goal
@@ -246,7 +238,7 @@ The following picture shows how the Fallout terminal appears to the user.
 #### Possible future developments
 A possible future development might be deploying this script as an app for my mobile, so as to be able to run it from a more comfortable "access point": I am still lazy and turning on my PC takes some effort (:smile:)
 
-## Annex: Old projects in Scikit-Learn
+# Annex: Old projects in Scikit-Learn
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Scikit Learn` 
 * [Diabetes dataset: Linear Regression](https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git)
 * [Diabetes dataset: Polynomial and Elastic Net Regression](https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git)
