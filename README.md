@@ -5,7 +5,7 @@ This website is about some of the projects that I completed and the skills that 
 
 [Project 1](##project-1:-italian-superball-simulator)
 
-[Project 2](#Project-2:-Funky-Stats-about-Naruto)
+[Project 2](#Project-2-:-Funky-Stats-about-Naruto)
 
 [Project 3](##project-3:-house-terminal-inventory-system)
 
