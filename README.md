@@ -245,3 +245,8 @@ The following picture shows how the Fallout terminal appears to the user.
 
 #### Possible future developments
 A possible future development might be deploying this script as an app for my mobile, so as to be able to run it from a more comfortable "access point": I am still lazy and turning on my PC takes some effort (:smile:)
+
+## Annex: Old projects in Scikit-Learn
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` 
+https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git
+https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git
