@@ -242,3 +242,94 @@ A possible future development might be deploying this script as an app for my mo
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Scikit Learn` 
 * [Diabetes dataset: Linear Regression](https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git)
 * [Diabetes dataset: Polynomial and Elastic Net Regression](https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git)
+
+##
+
+# My take on "An Introduction to Statistical Learning" 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Scikit-Learn` `#Pytorch`
+
+#### What's in the book?
+_”An Introduction to Statistical Learning provides a broad and less technical treatment of key topics in statistical learning. This book is appropriate for anyone who wishes to use contemporary tools for data analysis.”_. The chapters cover the following topics:
+- What is statistical learning?
+- Regression    
+- Classification
+- Resampling methods
+- Linear model selection and regularization
+- Moving beyond linearity
+- Tree-based methods
+- Support vector machines
+- Deep learning
+- Survival analysis
+- Unsupervised learning
+- Multiple testing
+
+(https://www.statlearning.com/)
+
+#### Goal
+I studied this book to accomplish two **goals**, namely:
+- Revise the techniques, methods and deepen my knowledge about Statistical Learning ➡️ Accomplished in chapters 1 through 9: **theory+exercises using Numpy, Pandas, Matplotlib, Seaborn, Scikit Learn**
+- Widen my knowledge about deep learning ➡️ Accomplished in chapter 10: **theory+exercises using Pytorch** 
+
+#### Some comments about the source code
+I completed the `applied exercises` of a given chapter not in a single take. This is why, in the source code, there might be repetitions (i.e.: copy paste of some lines of code, multiple imports of the same library, etc). Some additional notes:
+- The “#” comment is, most often, a comment made by me
+- The “‘’’” comment is, most often, copy pasted from the book or from the library I import a function from
+- I completed the labs and imported most of the functions of the ISLP module in the first 4 chapters. From chapter 5 onwards I focused mainly on the exercises and on the use of **Scikit Learn**, since it is the library that is most often used in the “real world”. This is also the reason why often, when I had to choose between performing a task with ISLP or with Scikit Learn, I chose the latter way of doing it.
+
+#### Chapter 1, 2: Introduction to Statistical Learning
+##### Theory
+- Trade-Off between prediction accuracy and model interpretability 
+- Supervised vs Unsupervised Learning
+- Regression vs Classification
+- Bias-Variance trade-off
+##### Exercises
+- Introduction to numerical Python, Indexing, Slicing, Loading, Loops, Graphics (Skipped because already very well known 💪🏻)
+- Data exploration using Pandas, Numpy: loading csvs, describing dfs, computing statistics (min, mean, max, stdev, etc)
+- Data plotting using Matplotlib, Seaborn
+
+#### Chapter 3: Linear Regression
+##### Theory
+- Simple and Multiple Linear Regression
+- Regression Coefficients estimation through least squares
+- Model and coefficients accuracy assessment (RSE, $R^2$ , t-statistic, p-values, residuals, etc)
+- Encoding qualitative predictors
+- Hypothesis testing
+- Comparison with KNN
+##### Exercises
+- Linear Regression models fitting by using the ISLP, Scikit Learn packages
+- Analysis of the fits and of the statistical significance of the variables through p-values, anova tests, R squared statistic, hypothesis testing, correlation, residuals etc
+- Data plotting using Matplotlib, Seaborn
+- Outlier, high-leverage observations analysis
+##### Some cool stuff from the exercises
+###### 13.f Population Regression Line vs Least Squares Line plot:
+➡️ Population Regression Line equation: $Y = −1 + 0.5X + e$ ➡️ Least Squares Line equation: $Y = −0.9265 + 0.5477X$
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/f863b7f3-10e7-4e2d-812b-4b6156014ac8)
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/c2abdd47-3784-493a-b8cf-50b28ac02632)
+The plot above shows the difference between the two lines present in its legend: 
+- The **Population Regression Line** is the best approximation possible of the true relationship between X and y. It is not always available. 
+- The **Least Squares Line** is the one that is estimated through Linear Regression Least Squares (the one whose coefficients you obtain through Scikit Learn linreg or statsmodels ols)
+Overall, from the point of view of coefficients estimation, the model performs well. Furthermore, both the intercept and the slope are **statistically significant** for the regression: their **p-value** is lower than 0.05 (you reject the **null hypothesis** that the associated beta is 0).
+###### 13e, g: When a polynomial model is not necessary
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/ac84a620-e446-408d-9a96-f36719d566ea)
+The figure above shows the output of calling the summary function of statsmodels on two models: left ➡️ linear, right ➡️ polynomial.
+Is it worth it to use a polynomial model instead of a linear one? No, and we can see it by looking at the $R^2$ coefficient: it is always the same, this mean that the explained variabilty of y by the model is always the same, even though we add more variable transformations in the polynomial one. Additionally, the p-value associated to the $X^2$ coefficient is higher than 0.05 ➡️ we fail to reject the null hypothesis its beta is = 0, i.e. the term is not statistically significant for the regression.
+
+#### Chapter 4: Classification
+##### Theory
+- Logistic Regression (and why not using Linear Regression)
+- Poisson Regression
+- LDA with p>=1
+- QDA
+- Naive Bayes
+- Comparison with KNN
+
+##### Exercises
+- Logistic and Poisson Regression, LDA, QDA, Naive Bayes models fitting by using Scikit Learn (train test splitting)
+- Performance analysis by (among other metrics) confusion matrices
+- Data plotting using Matplotlib, Seaborn
+- Graphical analyses to spot the most useful variables in predicting the output label
+
+##### Some cool stuff from the Exercises
+###### 12 e, f, g, h The usual Scikit Learn workflow
+
+
