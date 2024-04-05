@@ -365,6 +365,8 @@ All in all, the model that performed better was the LOOCV performed on degree 2 
 
 What do the techniques we used to verify the statistical significance of parameters in the previous chapters say about this conclusion?
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3b1d93f7-8e5d-4644-b1c4-c9f8d0e9e6b2)
+Actually, they agree with the conclusions that were drawn above: the p-values associated with the 3rd and 4th degree term are > 0.05, thus the parameters are not statistically significant for the regression.
+
 #### Chapter 6: Linear Model Selection and Regularization
 ##### Theory
 - Subset Selection (Best Subset, Forward and Backward Stepwise selection)
