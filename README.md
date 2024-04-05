@@ -238,11 +238,6 @@ The following picture shows how the Fallout terminal appears to the user.
 #### Possible future developments
 A possible future development might be deploying this script as an app for my mobile, so as to be able to run it from a more comfortable "access point": I am still lazy and turning on my PC takes some effort (:smile:)
 
-# Annex: Old projects in Scikit-Learn
-`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Scikit Learn` 
-* [Diabetes dataset: Linear Regression](https://github.com/ilovedadata/Machine-Learning-Linear-Regression-on-the-Sklearn-Diabetes-Dataset.git)
-* [Diabetes dataset: Polynomial and Elastic Net Regression](https://github.com/ilovedadata/Machine-Learning-Polynomial-Regression-and-Elastic-Net-CV-on-the-Sklearn-Diabetes-Dataset.git)
-
 ##
 
 # My take on "An Introduction to Statistical Learning" 
@@ -331,5 +326,217 @@ Is it worth it to use a polynomial model instead of a linear one? No, and we can
 
 ##### Some cool stuff from the Exercises
 ###### 12 e, f, g, h The usual Scikit Learn workflow
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/e79a3787-2006-43b3-aad4-64f2d06f8ff3)
+The pictures above refer to 4 different machine learning methods and display (part of) the usual Scikit Learn workflow, namely:
+- Creating an instance of a Scikit Learn class (like KNeighborsClassifier)
+- Fitting the model to the train data
+- Making some predictions on the test data
+- Computing some metrics
+For the last point, in the code snippets I call a custom function I defined, which works as follows:
+- Inputs ➡️ y_test, y_preds
+- Outputs ➡️ the confusion matrix, the percentage of correctly guessed classifications on the test set (i.e. the # of instances on the diagonal of the confusion matrix divided by the total number of instances in the test set)
+
+#### Chapter 5: Resampling methods
+##### Theory
+- Cross Validation (k-fold, leave-one-out)
+- Validation set approach
+- Bootstrap
+
+##### Exercises
+- Logistic Regression and Linear Regression models fitting after train, test, split of the data using Scikit Learn
+- Models performance evaluation on the validation set or through cross validation (k-fold, LOOCV) using Scikit Learn and writing custom functions
+- Statistics computation (posterior probability, mean, stdev, percentiles, etc) using Numpy, Pandas
+- Computation of standard errors through Bootstrap 
+- Data plotting using Matplotlib, Seaborn
+
+##### Some cool stuff from the Exercises
+###### 8 c, e, f LOOCV in Scikit Learn and comparison to the "real" model
+This exercise aimed at getting which degree model performed best when **LOOCVing** on a dataset, keeping in mind that the "true" model is the one that follows:
+
+$y = x - 2 * x^2 + rng.normal(size=100)$
+
+Looking at the code, it is possible to see that the whole analysis was implemented through a for cycle, of which I explain briefly the details in the comments below.
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/7b3cd624-f1f2-4496-ae3f-4056adf4a091)
+- Data is transformed through an instance of the PolynomialFeatures class of Scikit-Learn
+- By "cross_validate" we get the results of the cross validation. In this case, we are interested in the mean_squared_error metric and, since we have several scores (one per fold), we compute its mean.
+- The script above shows the trick by which it is possible to perform a LOOCV in Scikit Learn: it is enough to perform a k-fold CV, setting the k parameter (cv in the code above) to be equal to the number of rows of the features dataframe.
+
+All in all, the model that performed better was the LOOCV performed on degree 2 data. Surprising? Nope, since the "true" model is quadratic in X.
+
+What do the techniques we used to verify the statistical significance of parameters in the previous chapters say about this conclusion?
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/3b1d93f7-8e5d-4644-b1c4-c9f8d0e9e6b2)
+#### Chapter 6: Linear Model Selection and Regularization
+##### Theory
+- Subset Selection (Best Subset, Forward and Backward Stepwise selection)
+- Cp, AIC, BIC, Adjusted R-squared
+- Ridge, Lasso Regression
+- Principal Components Regression (PCR)
+- Partial Least Squares Regression (PLS)
+- Regression in high dimensions
+
+##### Exercises
+- Best, Forward Stepwise, Backward Stepwise Subset selection writing custom functions in Python Pandas, Numpy
+- Ridge, Lasso models fitting and parameter tuning by using Scikit Learn
+- PCR, PLS models fitting and parameter tuning
+- Data plotting using Matplotlib, Seaborn
+- Mean Squared Error, Root Mean Squared Error computation
+
+##### Some cool stuff from the Exercises
+###### 8 c, d: Forward and Backward Stepwise Selection Models
+Throughout this chapter, I implemented 3 algorithms: **forward stepwise, backward stepwise and best subset selection**. 
+The following example concerns the performance of two models obtained by the first two algorithms. The goal is to mimic as much as possible the following model:
+
+$y = 1 * X + 2 * X^2 + 3 * X^3 + e$
+
+**Forward and Backward stepwise selection** are two methods that aim at selecting the subset of features that are most related to the response and that, thus, let you create a **good** performing model. Why good and not **best**? Because they are not guaranteed to find the best performing subset of predictors, given how they select them. To do so, one should use the best subset seleciton method (see the source code for more details).
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/ab1b459a-46cf-48fa-bf93-02915486da9b)
+The pictures above display the results of, respectively, **Forward and Backward stepwise selection**. In this particular application, The first algorithm performs better than the second one and we can see it from three indicators:
+- **The variables chosen**: whilst the backward stepwise selection algorithm selects 6 features, missing $X^2$, which is in fact included in the original algorithm, the forward stepwise selection method selects the correct subset of features.
+- **The parameters** of the forward stepwise selection model are almost the correct ones.
+- Consequently, the $R^2$ of the FSS model is better than the BSS model one.
+
+###### 10 c, d: Test and Train error of a Best Subset Selection model
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/655bfdd5-7e01-4a36-85d5-c038ea28cb72)
+The picture above displays the test error and the train error of several models implemented at each iteration of a **best subset selection**. 
+For any given number of features, the best performing model is selected (EX: number of features = 6 is the performance of the best model possible having 6 features in total).
+
+#### Chapter 7: Moving Beyond Linearity
+##### Theory
+- Polynomial Regression
+- Step Functions
+- Regression Splines (Piecewise Polynomials, constraints, knots)
+- Smoothing Splines
+- Generalized Additive Models (GAM)
+
+##### Exercises
+- Polynomial Regression models fitting by using Scikit Learn 
+- Analysis of variables importance through  ANOVA tests
+- Step Function models fit by using Pandas, Scikit Learn
+- Regression spline models fit using the ISLP package  
+- Non-linear transformations of input variables 
+- Models optimization through cross-validation
+- Backfitting approach: custom function creation and analysis of the method
+- Data plotting using Matplotlib, Seaborn
+
+##### Some cool stuff from the Exercises
+###### 9 b Visualizing models up to the 20th degree
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/70bebcf5-e2d4-4340-b2ed-5f4e7be282f2)
+The plot above shows polynomials of different degrees, as well as the data they were generated from.
+In particular, the data come from the Boston dataset, and the "dis" feature was used to predict the "nox" response.
+Through a for cycle, 20 different models were generated, each containing a different transformation of the input feature. All this was accomplished by using Scikit-Learn LinearRegression(), PolynomialFeatures() and by train_test_splitting the data.
+
+###### 12 Visualizing the convergence of coefficients estimated through backfitting
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/becc173e-a434-4569-a498-2204785dbbd0)
+The plot shows how the coefficients estimate varied whilst iterating the backfitting procedure. In this particular case, the coefficients reached a value closed to the final one at iteration 133 (there was a total of 200 iterations).
+
+#### Chapter 8: Tree-based methods
+##### Theory
+- Regression and Classification Trees
+- Comparison with linear models
+- Bagging, Boosting, Random Forests
+- Bayesian additive Regression Trees (BART)
+
+##### Exercises
+- Classification and Regression Tree models fitting by using Scikit Learn 
+- Models optimization through cross-validation
+- Bagging, Boosting, Random Forest models fit and comparison to base tree models (confusion matrices, recall, etc)
+- Data plotting using Matplotlib, Seaborn
+
+##### Some cool stuff from the Exercises
+###### 8 c 5-fold cross validation of a DecisionTreeRegressor()
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/e61c1278-72f5-425b-9ba0-80c5f17fa3cc)
+The plot visualizes the performance of a **DecisionTreeRegressor** in 100 different configurations. The two parameters that whose value was tuned are the "max_depth" and the "max_features".
+The y-axis diplays the **Mean Squared Error** associated with each and every parameter configuration. For each parameter configuration, the plot shows the average performance on all the folds as well as the performance on each fold.
+Finally, a red dot highlights the configuration having the **lowest MSE**.
+
+###### 12 Visualizing how Recall varies as a function of the probability threshold
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/be57df87-4d13-42f7-ac4e-a0ba182db805)
+The plot colors are relative to the following methods:
+- Yellow ➡️ **RandomForestRegressor()** with a "max_features" parameter >= 45
+- Black ➡️ **RandomForestRegressor()** with a "max_features" parameter <= 44
+- Green ➡️ **Bagging Regressor**
+- Red Yellow ➡️ **Logistic Regressors**
+The goal of this exercise is to maximize recall. In total, 89 models were tested, and their recall was computed whilst varying the threshold according to which they made predictions ("positive" class ➡️ "Yes).
+As expected, lowering the threshold means increasing the **recall** (as a low probability is enough to be classified as "Yes"). Furthermore, considering more features when looking for the best split brought better results than considering a few (yellow recalls better than black ones) and, clearly, **Logistic Regression** performs better than the tree-based models in this application.
+
+#### Chapter 9: Support Vector Machines
+##### Theory
+- Maximal Margin Classifier and Hyperplane
+- Support Vector Classifiers (SVC): linear boundary between classes
+- Support Vector Machines (SVM): non-linear boundary between classes
+
+##### Exercises
+- SVC, SVM models fitting by using Scikit Learn 
+- Logistic Regression models fitting on non-linear transformations of the predictors to compare them with SVM
+- Models optimization through cross-validation and kernel variation (linear, radial, polynomial)
+- Data plotting using Matplotlib, Seaborn
+
+##### Some cool stuff from the Exercises
+###### 5 e-f Visualizing the classification made by a Logistic Regression fit on polynomial data
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/08bc4d39-5dbc-401d-a1fa-c649cf53a432)
+The plot above shows how a **Logistic Regression** model classifies observations when fit on features transformed up to the 4th degree. The legend of the plots shows the confusion matrix and, as it is evident from the plots, while the **performance improves significantly from degree 1 to degree 2**, the same is not true for the higher degrees. As a matter of fact, the confusion matrix keeps on being equal (actually, this happens up to degree 12).
+
+###### 7 c 5-fold cross validation of a Support Vector Machine with a radial kernel
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/6847b991-fdf3-458a-9045-78827feaffbf)
+This plot logic resembles the one of Exercise 8 c from chapter 8: a **cross-validation** was performed in order to get the best performing parameters configuration for a **SVM model**. As on the previous plot, on top of the **mean performance** of the parameter configuration, the performance on each individual fold is shown.
+As it is evident from the picture, the accuracy of the model is higher when the "gamma" parameter is set to "scale".
+
+#### Chapter 10: Neural Networks
+##### Theory
+- Single and Multiple Layers Neural Networks
+- Convolutional Neural Networks (CNN) architecture (convolution and pooling layers)
+- Recurrent Neural Networks (RNN). Particular focus on time series forecasting
+- Neural Network fitting (Backpropagation, Dropout Regularization) and Double Descent
+
+##### Exercises
+- Gradient Descent application on sin/cos functions 
+- Neural Networks fitting and performance comparison with respect to other classification/regression models
+- CNN classification of images
+- Creation and fitting of linear autoregressive Neural Networks (RNN) and performance analysis as a function of model architecture and features used to train the model
+
+##### Some cool stuff from the Exercises
+###### 6 c,d Visualizing Gradient Descent
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/78a7a6e2-ecc5-443c-bb15-5bc503d53790)
+The plot above shows how **Gradient Descent** finds a local minimum of a sin function. As expected, the **local minimum** that is found by gradient descent depends on the initial **starting point**. Furthermore, it is possible to verify visually that the bigger is the slope of the function, the bigger is the step taken by the gradient descent.
+
+###### 13 The performance of a Neural Network as a function of the neurons in its hidden units
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/661ca54c-0632-4c3e-a86c-169adf38e8de)
+This plot displays the performance of a **Neural Network** as a function of the number of the neurons in its 3 linear **hidden layers**.
+The **colors** of the plot highlight the different number of neurons in each of the different (4) **architectures tested**. 
+Furthermore, it is possible to observe the performance at each different **epoch** of the training loop (each "color" has **10 different BCEs**, as the training loop was performed in 10 epochs).
+In addition, the **dotted lines** refer to the performance of the given model architecture when **dropout regularization** is applied.
+Overall, the best performance (accuracy=0.866) was obtained for a model using 64 neurons and dropout regularization.
+
+#### Chapter 12: Unsupervised Learning
+##### Theory
+- PCA
+- KMeans Clustering
+- Hierarchical Clustering
+
+##### Exercises
+- Demonstration of the equivalence of the use of correlation-based distance and Euclidean distance as dissimilarity measures for hierarchical clustering
+- Computation of PCA Proportion of Variance Explained in different ways
+- Clustering models fitting and performance analysis as a function of the preprocessing steps and of the variables the model is fitted on
+- Dendrograms interpretation and analysis
+
+##### Some cool stuff from the Exercises
+###### 7 correlation-based distance and Euclidean distance as dissimilarity measures for hierarchical clustering
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/9b58f090-a671-4921-b67a-91dfc52a1fab)
+The plot above shows how the two aforementioned dissimilarity measures are almost equivalent for hierarchical clustering.
+To obtain the plot, all the observations have been **standardized**. The red line represents the **squared euclidean distance** between two consecutive observations, the blue line $1 - r_{ij}$, where $r_{ij}$ is the **correlation** between two consecutive observations.
+P.S.: the process of manipulating the dataframe to demonstrate such a thing has been excruciating!
+
+###### 13 b How the linkage method changes the appearance of a dendrogram
+![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/81e42c5e-d614-4ce7-a560-80a3b1b367cd)
+This plot displays the different ways in which the **Hierarchical Clustering** algorithm groups together the observations according to the linkage **method** used, i.e. according to how the distance between observations is computed.
+In particular, the first plot shows the grouping of the samples when **linkage = "complete"**, the bottom pic displays how observations are clustered if **linkage = "average"**.
+
+
+
+
+
+
+
+
 
 
