@@ -332,6 +332,7 @@ The pictures above refer to 4 different machine learning methods and display (pa
 - Fitting the model to the train data
 - Making some predictions on the test data
 - Computing some metrics
+
 For the last point, in the code snippets I call a custom function I defined, which works as follows:
 - Inputs ➡️ y_test, y_preds
 - Outputs ➡️ the confusion matrix, the percentage of correctly guessed classifications on the test set (i.e. the # of instances on the diagonal of the confusion matrix divided by the total number of instances in the test set)
@@ -447,7 +448,7 @@ The plot shows how the coefficients estimate varied whilst iterating the backfit
 ##### Some cool stuff from the Exercises
 ###### 8 c 5-fold cross validation of a DecisionTreeRegressor()
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/e61c1278-72f5-425b-9ba0-80c5f17fa3cc)
-The plot visualizes the performance of a **DecisionTreeRegressor** in 100 different configurations. The two parameters that whose value was tuned are the "max_depth" and the "max_features".
+The plot visualizes the performance of a **DecisionTreeRegressor** in 100 different configurations. The two parameters whose value was tuned are the "max_depth" and the "max_features".
 The y-axis diplays the **Mean Squared Error** associated with each and every parameter configuration. For each parameter configuration, the plot shows the average performance on all the folds as well as the performance on each fold.
 Finally, a red dot highlights the configuration having the **lowest MSE**.
 
