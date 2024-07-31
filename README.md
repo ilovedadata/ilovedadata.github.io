@@ -2,14 +2,14 @@
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 
 # Index
-[Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
-[Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
-[Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
-[My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning) # My take on "An Introduction to Statistical Learning" 
+* [Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
+* [Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
+* [Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
+* [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 
-# Project 1: Italian Superball simulator 💸 [Index](#index)
+# Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
-
+[Index](#index)|[Next project](#project-2-funky-stats-about-naruto-) 
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
 
