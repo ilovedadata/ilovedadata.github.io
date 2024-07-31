@@ -7,6 +7,7 @@ This website is about some of the projects that I completed and the skills that 
 * [Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
+* 👽💥 **_Currently working on on: Poker montecarlo simulations in Python, 5 card and texas hold'em Poker simulators in Python_** 💥👽
 
 # Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
