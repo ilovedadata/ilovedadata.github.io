@@ -6,6 +6,7 @@ This website is about some of the projects that I completed and the skills that 
 * [Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
 * [Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
+* [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 
 # Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
