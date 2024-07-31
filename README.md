@@ -1,11 +1,11 @@
 # Hi everyone 👋, I am ilovedadata, I am a developer and I LOVE diving into data and programming 💻.
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 
-# Index 
-1. [Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
-* [Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
-* [Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
-* [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning) # My take on "An Introduction to Statistical Learning" 
+# Index
+[Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
+[Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
+[Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
+[My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning) # My take on "An Introduction to Statistical Learning" 
 
 # Project 1: Italian Superball simulator 💸 [Index](#index)
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
