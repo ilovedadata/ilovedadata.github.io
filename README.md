@@ -8,8 +8,10 @@ This website is about some of the projects that I completed and the skills that 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 
 # Project 1: Italian Superball simulator 💸 
-`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
+
 [Index](#index)|[Next project](#project-2-funky-stats-about-naruto-) 
+
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
 
@@ -87,9 +89,11 @@ The structures and scripts used in this project can possibly be used in the futu
 - `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita` 
 ## 
 
-# Project 2: Funky Stats about Naruto 🦊 [Index](#index) 
+# Project 2: Funky Stats about Naruto 🦊
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
  `#Japanese` 
+
+[Index](#index) | [Next project](#project-3-house-terminal-inventory-system-) 
 
 #### Project description and goal
 The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
@@ -189,9 +193,11 @@ The code and the structures that were used to analyze the data about the Anime c
 
 ## 
 
-# Project 3: House terminal inventory system 🏠 [Index](#index)
+# Project 3: House terminal inventory system 🏠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
- 
+
+[Index](#index) | [Next project](#project-3-house-terminal-inventory-system-) 
+
 #### Project description and goal
 The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project is to create an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
 
