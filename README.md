@@ -10,7 +10,7 @@ This website is about some of the projects that I completed and the skills that 
 # Project 1: Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
 
-[Index](#index)|[Next project](#project-2-funky-stats-about-naruto-) 
+[Index](#index) | [Next project](#project-2-funky-stats-about-naruto-) 
 
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
@@ -196,7 +196,7 @@ The code and the structures that were used to analyze the data about the Anime c
 # Project 3: House terminal inventory system 🏠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
 
-[Index](#index) | [Next project](#project-3-house-terminal-inventory-system-) 
+[Index](#index) | [Next project](#my-take-on-an-introduction-to-statistical-learning)
 
 #### Project description and goal
 The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project is to create an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
@@ -252,8 +252,10 @@ A possible future development might be deploying this script as an app for my mo
 
 ##
 
-# My take on "An Introduction to Statistical Learning" [Index](#index) 
+# My take on "An Introduction to Statistical Learning" 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Scikit-Learn` `#Pytorch`
+
+[Index](#index) 
 
 #### What's in the book?
 _”An Introduction to Statistical Learning provides a broad and less technical treatment of key topics in statistical learning. This book is appropriate for anyone who wishes to use contemporary tools for data analysis.”_. The chapters cover the following topics:
