@@ -2,12 +2,12 @@
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 
 # Index 
-[Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
-[Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
-[Project 3: house inventory fallout terminal](#project-2-house-terminal-inventory-system-) 
-[My take on an introduction to statistical learning](#my-take-on-an-"introduction-to-statistical-learning") # My take on "An Introduction to Statistical Learning" 
+*[Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
+*[Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
+*[Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
+*[My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning) # My take on "An Introduction to Statistical Learning" 
 
-# Project 1: Italian Superball simulator 💸
+# Project 1: Italian Superball simulator 💸 [Index](#index)
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` 
 
 #### Project description and goal
@@ -87,7 +87,7 @@ The structures and scripts used in this project can possibly be used in the futu
 - `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita` 
 ## 
 
-# Project 2: Funky Stats about Naruto 🦊 
+# Project 2: Funky Stats about Naruto 🦊 [Index](#index) 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
  `#Japanese` 
 
@@ -189,7 +189,7 @@ The code and the structures that were used to analyze the data about the Anime c
 
 ## 
 
-# Project 3: House terminal inventory system 🏠
+# Project 3: House terminal inventory system 🏠 [Index](#index)
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
  
 #### Project description and goal
@@ -246,7 +246,7 @@ A possible future development might be deploying this script as an app for my mo
 
 ##
 
-# My take on "An Introduction to Statistical Learning" 
+# My take on "An Introduction to Statistical Learning" [Index](#index) 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Scikit-Learn` `#Pytorch`
 
 #### What's in the book?
