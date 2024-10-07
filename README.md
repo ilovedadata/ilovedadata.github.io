@@ -7,7 +7,7 @@ This website is about some of the projects that I completed and the skills that 
 * [Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
-* Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code :point_right:[here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
+* Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * 👽💥 **_Currently working on on: Poker montecarlo simulations in Python, 5 card and texas hold'em Poker simulators in Python_** 💥👽
 
 # Project 1: Italian Superball simulator 💸 
