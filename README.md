@@ -2,7 +2,7 @@
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 
 # Index
-* [A powerball simulator](#italian-superball-simulator-) [Next project](#the-simulation-) 
+* [A powerball simulator](#italian-superball-simulator-) [Next project](#the-simulation) 
 * [Funky scraped stats](#funky-stats-about-naruto-) 
 * [House inventory fallout terminal](#house-terminal-inventory-system-) 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
