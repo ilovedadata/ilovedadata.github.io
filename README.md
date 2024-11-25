@@ -551,6 +551,108 @@ P.S.: the process of manipulating the dataframe to demonstrate such a thing has 
 This plot displays the different ways in which the **Hierarchical Clustering** algorithm groups together the observations according to the linkage **method** used, i.e. according to how the distance between observations is computed.
 In particular, the first plot shows the grouping of the samples when **linkage = "complete"**, the bottom pic displays how observations are clustered if **linkage = "average"**.
 
+# Speeding up montecarlo simulations using Neural Networks ♠️♥️♣️♦️🧠
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` `#Pytorch` 
+
+[Index](#index) | 
+
+#### Project description and goal
+This is a project where I had a lot of fun. I used data structures to create functions simulating events, I computed the probability of complex events by random sampling and then I trained a neural network which sped up my simulations. 
+Specifically, the project is about building a **poker simulator** from the ground up, without employing ready-to-use libraries, to then perform **montecarlo simulations** and, finally, speed them up using a neural network. Yeah, but what are montecarlo simulations? 
+From wikipedia, they are a class of computational algorithms that rely on repeated random sampling to obtain numerical results. Basically, I will:
+- Randomly generate poker hands;
+- Make use of some functions that I coded in Python to determine whether a given outcome happened or not;
+- Repeat the two steps above a _lot_ of times, to simulate the long-term occurrences of poker hands.
+After doing so for both the 5-card and the Texas hold'em poker rules and proving that the probabilities are correct, I will go on expanding the project, by making it possible to determine the winner of a poker match, using a neural network to speed up the simulations and optimizing code to reduce the simulations time. The goal is to perform as much simulations as possible in the shortest amount of time.
+
+#### Code structure
+The code is made up by 4 main sections:
+##### 5-card poker montecarlo simulator section
+
+###### OOP and classes
+The first thing you need when playing poker is a deck of cards. The first thing you need when creating a deck of cards is the idea of what a card is. This is why, first and foremost, in this section I create two classes: the card and the deck. 
+
+* **The card class**
+  The card class is very simple, it has two methods (`__init__`, `__repr__`) and its only goal is to represent a card as follows:
+  `(Rank, Suit). Example: ('A', 'D') is an Ace of Diamonds.
+* **The deck class**
+  The deck class is more complex but, basically, it makes use of the card class to create a list of cards, given some ranks and some suits. In addition to the `__repr__` and `__init__` method, I implemented the `__getitem__`, `__len__` and `__setitem__` methods, that will all be needed when performing simulations. 
+* **Bonus: The (very lucky) deck classes**
+  When training my neural network (`nn`), I faced a problem: if a royal flush only happens 0.000154% of the time, how will my nn learn how to spot it? This is why I created variations of the "base" deck class to have decks where a given hand happened 100% of the time. For instance, in a StraightFlushDeck only Straight Flushes can happen. 
+  
+###### The "core" functions
+The engine of my simulator are the several functions I coded to make it work. Some examples:
+- In order to play poker, you need to draw hands from a deck. This is why I built a function that makes use of the classes created in the section above and does just that.
+- Furthermore, I created several functions that are able to detect whether a given poker hand was scored. **The latter ones make use of my knowledge of data structures** (lists, hash maps, sets, etc...). An example? Let's say that, in order to detect whether the given hand contains a pair, I check for the length of some of the data structures I mentioned.
+- Since I wanted to be able to determine the winner among several players, I created two additional functions that sort the ranks and the suits according to their importance for the game that is being played. The trickiest part? Solving ties, look at the following example to understand.
+
+  `Player_1 [(A, D), (A, C), (8, S), (4, S), (10, H)];`
+  
+  `Player_2 [(A, H), (3, S), (2, D), (9, H), (A, S)];`
+  
+  `To solve ties, I made use of, once again, data structures and algorithms, as well as of some of Python functionalities, like a particular way in which Python compares sequences.`
+
+###### The simulation
+In order to perform the montecarlo simulation, I put everything together in a Python loop whose main tasks are:
+- Getting input parameters such as number of players and games played.
+- Simulating the (thousands of) games and determine the winner(s) of a given poker game. 
+- Store everything in a pandas dataframe to compute stats and plot cool stuff.
+
+For every simulation performed, I always checked one thing: the real probabilities of the hands (source: Wikipedia) must not differ significantly from the ones I computed through my simulation.
+![Pic(1)](https://github.com/user-attachments/assets/c30d3ecd-af0e-49d4-bd42-e148be221471)
+
+##### Texas hold'em poker montecarlo simulator section
+The way I implemented the Texas hold'em simulator is very similar to how I created the 5-card poker one. 
+However, similar does not mean equal and I want to stress this point: at the beginning, I thought that, with just a few changes, I could create such a simulator. In fact, this was not the case, as in Texas hold'em you care about the 5 most important cards in a 7 card hand. 
+Coding such a game mechanic has been a nightmare. To sum up, the main issue was finding a way to systematycally spot the 5 most important cards, for each of the different scores that might happen (from high card to royal flush). Furthermore and for the same reason (the 5 most important cards!), solving ties in a game is more challenging in Texas hold'em than in 5-card poker. Look at the following example to understand.
+
+  `Player_1 [(8, S), (4, S)]; Player_2 [(2, S), (6, S)]; Flop [(A, H), (9, H), (A, S)]; Turn [(A, D)]; River [(9, D)];`
+  
+  `Player_1 most important cards [(A, H), (9, H), (A, S), (A, D), (9, D)];`
+  
+  `Player_2 most important cards [(A, H), (9, H), (A, S), (A, D), (9, D)];`
+  
+  `Conclusion: this is a tie and this is trickier to spot that it is in 5-card poker. Why? Once again, because in Texas hold'em only the 5 highest cards matter for a given player, with 5 cards out of 7 being shared by the players.`
+
+With this said, let's look at some cool plots. The first shows which hands, flops, turns, rivers, were the most common ones out of 3000 games played. 
+![Pic(1)](https://github.com/user-attachments/assets/228b1d17-4621-4dd8-bbe3-77047cd7f5d4)
+
+The second plot is a 3d plot on which I implemented a **custom labelling technique**. This plot shows that the higher the score, the higher the amount of times a hand wins. For instance, a high card happens a lot of times but wins a few (Times_won close to 0, Results_count close to 2000), a straight flush wins whenever it is scored (low Results_count but similar Times_won value).
+![Pic(2)](https://github.com/user-attachments/assets/f9fed768-8219-4d6c-b003-84d9f6e00353)
+
+##### Neural network simulations "acceleration"
+###### Nn training
+The nn I trained had one goal: it needed to perform montecarlo simulations in a quicker way. To be clear, I trained the nn to predict the poker hands and, as stated before, I made sure that a significant amount of hands was present for each of the scores I wanted the nn to predict. Specifically, more than 500k hands were generated and used as a train set. At least 20k of each of the scores were present.
+
+For what concerns the architecture of the neural network, I used 3 linear layers, on the first two of which I applied an activation function. The loss function I used to keep track of the improvement of the nn performance throughout the optimization process is the cross entropy loss.
+
+The following plots sum up the results I got in the optimization loop, in which I trained 5 different nn on 20 epochs. In the first plot, both the training and the validation cross entropy loss are plotted as a function of the epoch number: in the end, the 64 hidden neurons nn seems to be the best performing one.
+![Pic(7)](https://github.com/user-attachments/assets/df651fc8-6c3a-4ac8-9960-6355b4344075)
+
+The second plot shows (left part) the hands that the models misclassified out of the 54000 in the test set. Impressively, the 64 hidden neurons model misclassifies just 11 of them. On the right part, a neat stat: the most frequently misclassified "hand" by the model. If we consider the best performing model, most of the 11 misclassified hands are straights.
+![Pic(8)](https://github.com/user-attachments/assets/86236e57-69bf-43b1-981c-1978a5c70a6e)
+
+###### Optimization and montecarlo speeding-up section
+![Pic(9)](https://github.com/user-attachments/assets/decee99e-4cd4-435f-a969-e354a68f3cac)
+
+The picture above shows the time taken by the simulations as a function of the number of hands played. 
+The orange lines refer to the simulations performed by the neural network, the cyan lines to the ones performed by using the functions I wrote to detect the poker hands.
+Furthermore, the upper plots refer to the time that is taken to create the df where the data about the simulations is stored, the lower plots refer to the time taken to perform the simulations. 
+Consequently, to obtain the total duration of the whole process (df creation + simulation), one has to add the two lines that look the same on the upper plot and on the lower plot. 
+`For instance, on the left (cyan) we can say that 100000 simulations take about 800 seconds in the non-optimized setting (mostly for the creation of the df).`
+
+The main thing that it is possible to notice is that the "creation" part takes a lot of time compared to the evaluation one. This is why I re-wrote the code and created an optimized version of it (`_opti`), whose simulation times are represented by the dashed lines. 
+
+Excitingly, the optimization reduced the simulation times by A LOT. This is showed by the fact that a million simulations in the optimized configuration only take a fraction of the time that was necessary to perform a tenth of them in the standard version of the code. The most evident improvement is in the nn creation plot: considering 100000 simulations, the time needed to simulate decreased from 2500 s (more than 40 minuted) to just 17 seconds.
+
+**Yeah but in the end, was I able to speed up montecarlo simulations by using a neural network?** YES! Look at the lower part of the plot: even though for a "low" number of simulations (<= 100000) the difference is not that impactful on user experience (0.82 seconds are not that perceivably different from 0.04), if we consider a million of simulations, the montecarlo performed by the nn takes 1% of the time it takes when it is performed normally (0.63 s vs 39 s). 
+
+It is true that creating the df for a nn-montecarlo simulation takes more than it does in a normal setting, but I think that the time savings in the simulation part of the process are astonishing nonetheless (and let me stress, once again, that the nn misclassified just 11 instances out of 54k on the test set, so it is pretty accurate). 
+#### Possible future developments
+As stated in the powerball project, the structures and scripts used in this project can possibly be used in the future to simulate other kinds of gamble games/casino games. Furthermore, the functions I wrote to perform "normal" montecarlo simulations might still be optimized, thus time taken to perform the simulations might decrease again. The same can be said about the df creation part of the nn simulations: optimizing data storage might decrease the overall simulation time even more!
+#### Sources
+- `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia
+
 
 
 
