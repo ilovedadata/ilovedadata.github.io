@@ -258,7 +258,7 @@ A possible future development might be deploying this script as an app for my mo
 # My take on "An Introduction to Statistical Learning" 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Scikit-Learn` `#Pytorch`
 
-[Index](#index) | [Next project](#speeding-up-montecarlo-simulations-using-neural-networks)
+[Index](#index) | [Next project](#speeding-up-montecarlo-simulations-using-neural-networks-)
 
 #### What's in the book?
 _”An Introduction to Statistical Learning provides a broad and less technical treatment of key topics in statistical learning. This book is appropriate for anyone who wishes to use contemporary tools for data analysis.”_. The chapters cover the following topics:
