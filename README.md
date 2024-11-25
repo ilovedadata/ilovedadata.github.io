@@ -77,8 +77,9 @@ The code is made up by 5 main sections:
 
    Speaking of plots, the two histograms that follow store information about the times a user hit a combination and the frequency with which a number is drawn. As stated before, the "higher" the combination, the higher the prize won, the lower the probability that combination is drawn.
   
-  ###### plotnr1
-  [Index](#index) | [More plots](#plotnr2) 
+###### plotnr1
+  
+[Index](#index) | [More plots](#2) 
    ![Figure_1](https://user-images.githubusercontent.com/106730909/216787470-9213e1fb-1553-4c15-9671-846cd141eb38.png)
 
    As a design choice, combinations from "2" upwards are shown, even though, when playing superstar, the user can win scoring just 1 or 0. Nonetheless, when computing the amount of money won by the user, such combinations (0+superstar, 1+superstar) are taken into account. Furthermore (and since it took me quite a bit of time it's only fair I state it 👀) a custom labelling process has been implemented in order to label the histogram plot on the left exactly above each and every histogram column, respecting the color palette. For what concerns the plot on the left, it will be useful to draw some conclusions. The plot on the right shows that no clear patterns are present in the drawing of numbers (which is random!), something that has been confirmed during the different simulations I performed.
@@ -153,8 +154,9 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     **1.What is the highest delta episodes between first and last appearance of a given character?**
   
-    ###### plotnr2
-  [Index](#index) | [Prev plot](#plotnr1) | [More plots](#plotnr3) 
+  ###### 2
+  
+  [Index](#index) | [Prev plot](#1) | [More plots](#3) 
     ![MaxMinAppearance](https://user-images.githubusercontent.com/106730909/236666444-13798f95-249f-4c63-b4d7-6a5167b03cc7.png)
     Unsurprisingly, main characters such as Shikamaru, Iruka, Ino, Sakura and Naruto himself lead the chart. Surprisingly enough for me, Sasuke is not in the top spot: this is probably due to Sasuke departure from Team Kakashi. 
     
@@ -255,8 +257,9 @@ The terminal has been implemented as follows:
 
 The following picture shows how the Fallout terminal appears to the user.
 
-  ###### plotnr3
-  [Index](#index) | [Prev plot](#plotnr2) | [More plots](#plotnr4) 
+###### plotnr3
+  
+[Index](#index) | [Prev plot](#plotnr2) | [More plots](#plotnr4) 
 ![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/64b06a75-5c4f-4dc7-a7a7-b08104bfe0a3)
 
 #### Possible future developments
@@ -419,8 +422,9 @@ $y = 1 * X + 2 * X^2 + 3 * X^3 + e$
 
 **Forward and Backward stepwise selection** are two methods that aim at selecting the subset of features that are most related to the response and that, thus, let you create a **good** performing model. Why good and not **best**? Because they are not guaranteed to find the best performing subset of predictors, given how they select them. To do so, one should use the best subset seleciton method (see the source code for more details).
 
-  ###### plotnr4
-  [Index](#index) | [Prev plot](#plotnr3) | [More plots](#plotnr5) 
+###### plotnr4
+  
+[Index](#index) | [Prev plot](#plotnr3) | [More plots](#plotnr5) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/ab1b459a-46cf-48fa-bf93-02915486da9b)
 The pictures above display the results of, respectively, **Forward and Backward stepwise selection**. In this particular application, The first algorithm performs better than the second one and we can see it from three indicators:
 - **The variables chosen**: whilst the backward stepwise selection algorithm selects 6 features, missing $X^2$, which is in fact included in the original algorithm, the forward stepwise selection method selects the correct subset of features.
@@ -453,8 +457,9 @@ For any given number of features, the best performing model is selected (EX: num
 ##### Some cool stuff from the Exercises
 ###### 9 b Visualizing models up to the 20th degree
 
-  ###### plotnr5
-  [Index](#index) | [Prev plot](#plotnr4) | [More plots](#plotnr6) 
+###### plotnr5
+  
+[Index](#index) | [Prev plot](#plotnr4) | [More plots](#plotnr6) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/70bebcf5-e2d4-4340-b2ed-5f4e7be282f2)
 The plot above shows polynomials of different degrees, as well as the data they were generated from.
 In particular, the data come from the Boston dataset, and the "dis" feature was used to predict the "nox" response.
@@ -462,8 +467,9 @@ Through a for cycle, 20 different models were generated, each containing a diffe
 
 ###### 12 Visualizing the convergence of coefficients estimated through backfitting
 
-  ###### plotnr6
-  [Index](#index) | [Prev plot](#plotnr5) | [More plots](#plotnr7) 
+###### plotnr6
+  
+[Index](#index) | [Prev plot](#plotnr5) | [More plots](#plotnr7) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/becc173e-a434-4569-a498-2204785dbbd0)
 The plot shows how the coefficients estimate varied whilst iterating the backfitting procedure. In this particular case, the coefficients reached a value closed to the final one at iteration 133 (there was a total of 200 iterations).
 
@@ -483,8 +489,9 @@ The plot shows how the coefficients estimate varied whilst iterating the backfit
 ##### Some cool stuff from the Exercises
 ###### 8 c 5-fold cross validation of a DecisionTreeRegressor()
 
-  ###### plotnr7
-  [Index](#index) | [Prev plot](#plotnr6) | [More plots](#plotnr8) 
+###### plotnr7
+  
+[Index](#index) | [Prev plot](#plotnr6) | [More plots](#plotnr8) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/e61c1278-72f5-425b-9ba0-80c5f17fa3cc)
 The plot visualizes the performance of a **DecisionTreeRegressor** in 100 different configurations. The two parameters whose value was tuned are the "max_depth" and the "max_features".
 The y-axis diplays the **Mean Squared Error** associated with each and every parameter configuration. For each parameter configuration, the plot shows the average performance on all the folds as well as the performance on each fold.
@@ -492,8 +499,9 @@ Finally, a red dot highlights the configuration having the **lowest MSE**.
 
 ###### 12 Visualizing how Recall varies as a function of the probability threshold
 
-  ###### plotnr8
-  [Index](#index) | [Prev plot](#plotnr7) | [More plots](#plotnr9) 
+###### plotnr8
+  
+[Index](#index) | [Prev plot](#plotnr7) | [More plots](#plotnr9) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/be57df87-4d13-42f7-ac4e-a0ba182db805)
 The plot colors are relative to the following methods:
 - Yellow ➡️ **RandomForestRegressor()** with a "max_features" parameter >= 45
@@ -518,8 +526,9 @@ As expected, lowering the threshold means increasing the **recall** (as a low pr
 ##### Some cool stuff from the Exercises
 ###### 5 e-f Visualizing the classification made by a Logistic Regression fit on polynomial data
 
-  ###### plotnr9
-  [Index](#index) | [Prev plot](#plotnr8) | [More plots](#plotnr10) 
+###### plotnr9
+  
+[Index](#index) | [Prev plot](#plotnr8) | [More plots](#plotnr10) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/08bc4d39-5dbc-401d-a1fa-c649cf53a432)
 The plot above shows how a **Logistic Regression** model classifies observations when fit on features transformed up to the 4th degree. The legend of the plots shows the confusion matrix and, as it is evident from the plots, while the **performance improves significantly from degree 1 to degree 2**, the same is not true for the higher degrees. As a matter of fact, the confusion matrix keeps on being equal (actually, this happens up to degree 12).
 
@@ -544,15 +553,17 @@ As it is evident from the picture, the accuracy of the model is higher when the 
 ##### Some cool stuff from the Exercises
 ###### 6 c,d Visualizing Gradient Descent
 
-  ###### plotnr10
-  [Index](#index) | [Prev plot](#plotnr9) | [More plots](#plotnr11) 
+###### plotnr10
+
+[Index](#index) | [Prev plot](#plotnr9) | [More plots](#plotnr11) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/78a7a6e2-ecc5-443c-bb15-5bc503d53790)
 The plot above shows how **Gradient Descent** finds a local minimum of a sin function. As expected, the **local minimum** that is found by gradient descent depends on the initial **starting point**. Furthermore, it is possible to verify visually that the bigger is the slope of the function, the bigger is the step taken by the gradient descent.
 
 ###### 13 The performance of a Neural Network as a function of the neurons in its hidden units
 
-  ###### plotnr11
-  [Index](#index) | [Prev plot](#plotnr10) | [More plots](#plotnr12) 
+###### plotnr11
+
+[Index](#index) | [Prev plot](#plotnr10) | [More plots](#plotnr12) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/661ca54c-0632-4c3e-a86c-169adf38e8de)
 This plot displays the performance of a **Neural Network** as a function of the number of the neurons in its 3 linear **hidden layers**.
 The **colors** of the plot highlight the different number of neurons in each of the different (4) **architectures tested**. 
@@ -581,8 +592,9 @@ P.S.: the process of manipulating the dataframe to demonstrate such a thing has 
 
 ###### 13 b How the linkage method changes the appearance of a dendrogram
 
-  ###### plotnr12
-  [Index](#index) | [Prev plot](#plotnr11) | [More plots](#plotnr13) 
+###### plotnr12
+
+[Index](#index) | [Prev plot](#plotnr11) | [More plots](#plotnr13) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/81e42c5e-d614-4ce7-a560-80a3b1b367cd)
 This plot displays the different ways in which the **Hierarchical Clustering** algorithm groups together the observations according to the linkage **method** used, i.e. according to how the distance between observations is computed.
 In particular, the first plot shows the grouping of the samples when **linkage = "complete"**, the bottom pic displays how observations are clustered if **linkage = "average"**.
@@ -664,8 +676,9 @@ For what concerns the architecture of the neural network, I used 3 linear layers
 
 The following plots sum up the results I got in the optimization loop, in which I trained 5 different nn on 20 epochs. In the first plot, both the training and the validation cross entropy loss are plotted as a function of the epoch number: in the end, the 64 hidden neurons nn seems to be the best performing one.
 
-  ###### plotnr13
-  [Index](#index) | [Prev plot](#plotnr12)
+###### plotnr13
+
+[Index](#index) | [Prev plot](#plotnr12)
 ![Pic(7)](https://github.com/user-attachments/assets/df651fc8-6c3a-4ac8-9960-6355b4344075)
 
 The second plot shows (left part) the hands that the models misclassified out of the 54000 in the test set. Impressively, the 64 hidden neurons model misclassifies just 11 of them. On the right part, a neat stat: the most frequently misclassified "hand" by the model. If we consider the best performing model, most of the 11 misclassified hands are straights.
