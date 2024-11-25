@@ -199,7 +199,7 @@ The code and the structures that were used to analyze the data about the Anime c
 # House terminal inventory system 🏠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
 
-[Index](#index) | [Next project](#my-take-on-an-introduction-to-statistical-learning)
+[Index](#index) | [Next project](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
 
 #### Project description and goal
 The project is about **me and my laziness**. Since I am not good at coming up with shopping lists, the goal of this project is to create an inventory system for my house that allows me to rapidly check for the items I need to buy whenever I have the need to go to the supermarket. The **UI** of the inventory system has been optimized for using it from a terminal and, on top of that, an easter egg is present for the user to discover: once he/she enters the number 999 as an input, a fully functional **Fallout 4** terminal is run, allowing the user to try and guess a password from a given list of words. 
