@@ -154,9 +154,9 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     
     **1.What is the highest delta episodes between first and last appearance of a given character?**
   
-  ###### 2
+  ###### plotnr2
   
-  [Index](#index) | [Prev plot](#1) | [More plots](#3) 
+  [Index](#index) | [Prev plot](#plotnr1) | [More plots](#plotnr3) 
     ![MaxMinAppearance](https://user-images.githubusercontent.com/106730909/236666444-13798f95-249f-4c63-b4d7-6a5167b03cc7.png)
     Unsurprisingly, main characters such as Shikamaru, Iruka, Ino, Sakura and Naruto himself lead the chart. Surprisingly enough for me, Sasuke is not in the top spot: this is probably due to Sasuke departure from Team Kakashi. 
     
