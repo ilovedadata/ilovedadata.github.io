@@ -8,7 +8,7 @@ This website is about some of the projects that I completed and the skills that 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
-* 💥NEW💥 [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-)
+* 💥NEW💥 [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
 
 # Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
