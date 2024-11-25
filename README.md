@@ -2,18 +2,18 @@
 This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️.
 
 # Index
-* [Project 1: a powerball simulator](#project-1-italian-superball-simulator-)
-* [Project 2: funky stats](#project-2-funky-stats-about-naruto-) 
-* [Project 3: house inventory fallout terminal](#project-3-house-terminal-inventory-system-) 
+* [A powerball simulator](#italian-superball-simulator-)
+* [Funky scraped stats](#funky-stats-about-naruto-) 
+* [House inventory fallout terminal](#house-terminal-inventory-system-) 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * 👽💥 **_Currently working on on: Poker montecarlo simulations in Python, 5 card and texas hold'em Poker simulators in Python_** 💥👽
 
-# Project 1: Italian Superball simulator 💸 
+# Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
 
-[Index](#index) | [Next project](#project-2-funky-stats-about-naruto-) 
+[Index](#index) | [Next project](#funky-stats-about-naruto-) 
 
 #### Project description and goal
 The project is about the **"Italian powerball" (superenalotto)**, a game in which 8 numbers are drawn and prizes are won depending on how many numbers you guessed right. 7 numbers make up the "standard" ticket the user buys (6 numbers + the so-called **jolly number**, allowing you to score a particular combination: the "5+1"), the eighth number is the so-called **superstar number** and can be purchased at an additional 0.50$. The **goal** of this project is to create a realistic game simulator which takes into account the probabilities associated with the wins and the amount of money spent/gained. Thanks to the use of **Data science/Data analysis tools**, dataframes were created to store the drawings and interesting stats about the game were analyzed and plotted, in order to answer a simple question: `can I win big at the lottery?`
@@ -92,11 +92,11 @@ The structures and scripts used in this project can possibly be used in the futu
 - `The data regarding probabiities and prizes come from the official superenalotto website at https://www.superenalotto.it/quanto-si-vince/calcolo-probabilita` 
 ## 
 
-# Project 2: Funky Stats about Naruto 🦊
+# Funky Stats about Naruto 🦊
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#HTML` `#ReverseEngineering` `#BeautifulSoup`
  `#Japanese` 
 
-[Index](#index) | [Next project](#project-3-house-terminal-inventory-system-) 
+[Index](#index) | [Next project](#house-terminal-inventory-system-) 
 
 #### Project description and goal
 The project is about **Naruto**, a Japanese Anime that follows the adventure of Naruto, a young Ninja from Konoha, in his quest to become Hokage. The data for this project is about the episodes of Naruto, not including the Naruto Shippuden ones. The **goal** of this project is to practice my **web scraping, data analysis and data visualization skills** by answering the `following questions`: 
@@ -196,7 +196,7 @@ The code and the structures that were used to analyze the data about the Anime c
 
 ## 
 
-# Project 3: House terminal inventory system 🏠
+# House terminal inventory system 🏠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Fallout` `#Random` 
 
 [Index](#index) | [Next project](#my-take-on-an-introduction-to-statistical-learning)
@@ -258,7 +258,7 @@ A possible future development might be deploying this script as an app for my mo
 # My take on "An Introduction to Statistical Learning" 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Scikit-Learn` `#Pytorch`
 
-[Index](#index) 
+[Index](#index) | [Next project](#speeding-up-montecarlo-simulations-using-neural-networks)
 
 #### What's in the book?
 _”An Introduction to Statistical Learning provides a broad and less technical treatment of key topics in statistical learning. This book is appropriate for anyone who wishes to use contemporary tools for data analysis.”_. The chapters cover the following topics:
