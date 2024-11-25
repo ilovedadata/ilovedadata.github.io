@@ -76,6 +76,7 @@ The code is made up by 5 main sections:
 * **Plotting section**
 
    Speaking of plots, the two histograms that follow store information about the times a user hit a combination and the frequency with which a number is drawn. As stated before, the "higher" the combination, the higher the prize won, the lower the probability that combination is drawn.
+  
   ###### plotnr1
   [Index](#index) | [More plots](#plotnr2) 
    ![Figure_1](https://user-images.githubusercontent.com/106730909/216787470-9213e1fb-1553-4c15-9671-846cd141eb38.png)
@@ -151,6 +152,7 @@ The project is about **Naruto**, a Japanese Anime that follows the adventure of 
     In this section we answer to the questions of the project description and goal paragraph.
     
     **1.What is the highest delta episodes between first and last appearance of a given character?**
+  
     ###### plotnr2
   [Index](#index) | [Prev plot](#plotnr1) | [More plots](#plotnr3) 
     ![MaxMinAppearance](https://user-images.githubusercontent.com/106730909/236666444-13798f95-249f-4c63-b4d7-6a5167b03cc7.png)
@@ -252,6 +254,7 @@ The terminal has been implemented as follows:
 * Whenever the user types a number corresponding to a word, the terminal prints the amount of letters that that word has in common with the password. For example, user input --> HOME, password --> COME: likeness = 3.
 
 The following picture shows how the Fallout terminal appears to the user.
+
   ###### plotnr3
   [Index](#index) | [Prev plot](#plotnr2) | [More plots](#plotnr4) 
 ![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/64b06a75-5c4f-4dc7-a7a7-b08104bfe0a3)
@@ -415,6 +418,7 @@ The following example concerns the performance of two models obtained by the fir
 $y = 1 * X + 2 * X^2 + 3 * X^3 + e$
 
 **Forward and Backward stepwise selection** are two methods that aim at selecting the subset of features that are most related to the response and that, thus, let you create a **good** performing model. Why good and not **best**? Because they are not guaranteed to find the best performing subset of predictors, given how they select them. To do so, one should use the best subset seleciton method (see the source code for more details).
+
   ###### plotnr4
   [Index](#index) | [Prev plot](#plotnr3) | [More plots](#plotnr5) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/ab1b459a-46cf-48fa-bf93-02915486da9b)
@@ -448,6 +452,7 @@ For any given number of features, the best performing model is selected (EX: num
 
 ##### Some cool stuff from the Exercises
 ###### 9 b Visualizing models up to the 20th degree
+
   ###### plotnr5
   [Index](#index) | [Prev plot](#plotnr4) | [More plots](#plotnr6) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/70bebcf5-e2d4-4340-b2ed-5f4e7be282f2)
@@ -456,6 +461,7 @@ In particular, the data come from the Boston dataset, and the "dis" feature was 
 Through a for cycle, 20 different models were generated, each containing a different transformation of the input feature. All this was accomplished by using Scikit-Learn LinearRegression(), PolynomialFeatures() and by train_test_splitting the data.
 
 ###### 12 Visualizing the convergence of coefficients estimated through backfitting
+
   ###### plotnr6
   [Index](#index) | [Prev plot](#plotnr5) | [More plots](#plotnr7) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/becc173e-a434-4569-a498-2204785dbbd0)
@@ -476,6 +482,7 @@ The plot shows how the coefficients estimate varied whilst iterating the backfit
 
 ##### Some cool stuff from the Exercises
 ###### 8 c 5-fold cross validation of a DecisionTreeRegressor()
+
   ###### plotnr7
   [Index](#index) | [Prev plot](#plotnr6) | [More plots](#plotnr8) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/e61c1278-72f5-425b-9ba0-80c5f17fa3cc)
@@ -484,6 +491,7 @@ The y-axis diplays the **Mean Squared Error** associated with each and every par
 Finally, a red dot highlights the configuration having the **lowest MSE**.
 
 ###### 12 Visualizing how Recall varies as a function of the probability threshold
+
   ###### plotnr8
   [Index](#index) | [Prev plot](#plotnr7) | [More plots](#plotnr9) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/be57df87-4d13-42f7-ac4e-a0ba182db805)
@@ -509,6 +517,7 @@ As expected, lowering the threshold means increasing the **recall** (as a low pr
 
 ##### Some cool stuff from the Exercises
 ###### 5 e-f Visualizing the classification made by a Logistic Regression fit on polynomial data
+
   ###### plotnr9
   [Index](#index) | [Prev plot](#plotnr8) | [More plots](#plotnr10) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/08bc4d39-5dbc-401d-a1fa-c649cf53a432)
@@ -534,12 +543,14 @@ As it is evident from the picture, the accuracy of the model is higher when the 
 
 ##### Some cool stuff from the Exercises
 ###### 6 c,d Visualizing Gradient Descent
+
   ###### plotnr10
   [Index](#index) | [Prev plot](#plotnr9) | [More plots](#plotnr11) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/78a7a6e2-ecc5-443c-bb15-5bc503d53790)
 The plot above shows how **Gradient Descent** finds a local minimum of a sin function. As expected, the **local minimum** that is found by gradient descent depends on the initial **starting point**. Furthermore, it is possible to verify visually that the bigger is the slope of the function, the bigger is the step taken by the gradient descent.
 
 ###### 13 The performance of a Neural Network as a function of the neurons in its hidden units
+
   ###### plotnr11
   [Index](#index) | [Prev plot](#plotnr10) | [More plots](#plotnr12) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/661ca54c-0632-4c3e-a86c-169adf38e8de)
@@ -569,6 +580,7 @@ To obtain the plot, all the observations have been **standardized**. The red lin
 P.S.: the process of manipulating the dataframe to demonstrate such a thing has been excruciating!
 
 ###### 13 b How the linkage method changes the appearance of a dendrogram
+
   ###### plotnr12
   [Index](#index) | [Prev plot](#plotnr11) | [More plots](#plotnr13) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/81e42c5e-d614-4ce7-a560-80a3b1b367cd)
@@ -651,6 +663,7 @@ The nn I trained had one goal: it needed to perform montecarlo simulations in a 
 For what concerns the architecture of the neural network, I used 3 linear layers, on the first two of which I applied an activation function. The loss function I used to keep track of the improvement of the nn performance throughout the optimization process is the cross entropy loss.
 
 The following plots sum up the results I got in the optimization loop, in which I trained 5 different nn on 20 epochs. In the first plot, both the training and the validation cross entropy loss are plotted as a function of the epoch number: in the end, the 64 hidden neurons nn seems to be the best performing one.
+
   ###### plotnr13
   [Index](#index) | [Prev plot](#plotnr12)
 ![Pic(7)](https://github.com/user-attachments/assets/df651fc8-6c3a-4ac8-9960-6355b4344075)
