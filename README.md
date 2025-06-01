@@ -9,7 +9,7 @@ This website is about some of the projects that I completed and the skills that 
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * 💥NEW💥 [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
-* 💥EVEN NEWER!!!💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator)
+* 💥EVEN NEWER!!!💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator-)
 
 # Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
@@ -700,7 +700,7 @@ As stated in the powerball project, the structures and scripts used in this proj
 #### Sources
 - `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia`
 
-# Building and optimizing a portfolio simulator
+# Building and optimizing a portfolio simulator 💵🎢 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Polars` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` 
 
 [Index](#index) | 
@@ -809,12 +809,12 @@ step = 2
 n = range(3,14,step)
 ```
 ##### The most important part of the simulation cycle
-It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](#####Simulator%20Pseudocode). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
+It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](#####simulator-pseudocode). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
 ##### Unavoidable randomness slows down the simulation
 The way the code is written, there is a part of the process that one cannot avoid from being influenced by randomness: once the rate of return is computed in point 3, the rows containing them need to be appended to the "whole" df, where you are storing the results. Unluckily, there is a catch and, to get it, let's make an example considering k = 5, n = 11:
-- Your df will look like the one from the [Simulator Logic](######Simulator%20logic) section, except you will have more columns (one per stock you compute the returns of), thus 11;
+- Your df will look like the one from the [Simulator Logic](######simulator-logic) section, except you will have more columns (one per stock you compute the returns of), thus 11;
 - When you compute the rate of returns randomly picking stocks, your df will have a *lot* of empty rows because, possibly, a given stock simply did not exist before a given date. This is especially true for higher number of stocks (since the more stocks you pick the higher the probability of picking one that was born recently) and for the higher the years of investments you simulate on (since it is more likely the period on which you compute the rate of returns on will include dates on which the stocks did not exist);
-- This means that, sometimes, you are not able to append any row to your df (point 4 of the [Simulator Pseudocode](#####Simulator%20Pseudocode)) and you have to keep on looping through your data, **causing the simulation time to increase**. The condition I imposed to append a row is that the maximum number of null columns (i.e. of null returns) in the given row has to be 1 meaning that, considering 11 stocks, each of the rows of the final df will have at least 10 stocks for which it was possible to compute a return on k = 5 years.
+- This means that, sometimes, you are not able to append any row to your df (point 4 of the [Simulator Pseudocode](######simulator-logic)) and you have to keep on looping through your data, **causing the simulation time to increase**. The condition I imposed to append a row is that the maximum number of null columns (i.e. of null returns) in the given row has to be 1 meaning that, considering 11 stocks, each of the rows of the final df will have at least 10 stocks for which it was possible to compute a return on k = 5 years.
 
 For clarity, the performance of the simulator that is plotted in the picture from this section was tested without taking into account this randomness. As a matter of fact, the tests aimed at verifying how fast my code was at looping through the (nr_years, nr_stocks) combinations and at computing returns knowing that, the faster it was at doing so, the faster we would be able to append non-null rows to the final df.
 ##### Some quick notes about the Pandas code optimization 
@@ -844,13 +844,13 @@ As stated before, the goal of this project is to visualize how investments are a
 
 For what concerns point 1, the simulations were performed so that the initial amount invested was divided and equally weighted among the different stocks. This means that, given one invests 1000 euros on 2 stocks, 500 euros are invested in each of them. 
 
-The latter point is important in order to interpret the simulations results: as stated [here](######Unavoidable%20randomness%20slows%20down%20the%20simulation), since during simulations I store rows containing at least a (nr_stocks-1) amount of stocks, thus the "bins" in the plots have to be interpreted as going from n-1 to n. For example, the nr_stocks = 11 bin contains simulations performed on rows containing 10 or 11 stock returns. 
+The latter point is important in order to interpret the simulations results: as stated [here](######unavoidable-randomness-slows-down-the-simulation), since during simulations I store rows containing at least a (nr_stocks-1) amount of stocks, thus the "bins" in the plots have to be interpreted as going from n-1 to n. For example, the nr_stocks = 11 bin contains simulations performed on rows containing 10 or 11 stock returns. 
 Furthermore, when a stock is missing, the amount of money that is invested is redistributed among the other non-missing stocks. EX: if one invests 1000 euros on 11 stocks but a stock is missing returns, for the sake of the simulation I will force the investment to be equally weighted on 10 stocks (100 euros each). 
 ##### This analysis favors stocks
 The way the simulator works, it favors stocks in 3 ways:
 - First, during the simulation I analyse data "in hindsight", using the data that still exist today. This means that, since I downloaded NASDAQ stocks tickers in 1Q-2025, I only have data about stocks that still exist atm and I do not have evidence about delisted stocks, thus I cannot model the risk of investing in something that is not on the market anymore at the time of the analysis. 
   This is favoring the stocks because I can simulate returns just on the stocks that performed decently enough not to be delisted from the stock exchange;
-- Second, since [unavoidable randomness slows down the simulation](######Unavoidable%20randomness%20slows%20down%20the%20simulation), I had to consider a range of years of investments that did not cause my simulation time to explode. As explained in [this section](######Unavoidable%20randomness%20slows%20down%20the%20simulation), the longer the considered period of time, the higher the probability of finding null rows, thus the need to "cap" the years of investments to 5 years. As explained by Paolo in several of his analyses, ETFs perform better on the longer time period (>=10 years), thus we are considering periods of time that are not optimal for their performance;
+- Second, since [unavoidable randomness slows down the simulation](######unavoidable-randomness-slows-down-the-simulation), I had to consider a range of years of investments that did not cause my simulation time to explode. As explained in [this section](######unavoidable-randomness-slows-down-the-simulation), the longer the considered period of time, the higher the probability of finding null rows, thus the need to "cap" the years of investments to 5 years. As explained by Paolo in several of his analyses, ETFs perform better on the longer time period (>=10 years), thus we are considering periods of time that are not optimal for their performance;
 - As explained in the last paragraph of the previous section, I am redistributing the investment on the stocks that do not have null returns, thus I am picking stocks that existed for a longer amount of time (this is especially true for increasing values of nr_years). Consequently, it would be fair to say that these stocks belong to a better performing cluster since they existed for a longer period of time while avoiding being delisted.
 
 With this said, let us look at some cool plots.
@@ -870,7 +870,7 @@ Furthermore, it is possible to spot two trends on the plot:
 Overall, the "ETF and chill" strategy seems far superior: by investing in a single financial tool you always get a higher probability of having higher returns, without being affected by the crazy volatility that characterize an investment in stocks (especially true for lower nr_stocks or nr_years values).
 In my opinion, the (relatively) good performance of the stock investments for portfolio of moderate sizes (top/top-left part of the plot) are due to the higher effect of high-growth stocks/bullish market conditions on the returns. This is even truer for a shorter investment period: as time goes on, this "high-growth" effect seems to get more and more subtle, ultimately leading to bigger sized portfolios on > nr_years having a risk profile approaching the ETF one (slightly better performance in the lower-right part of the plot). This very last phenomenon might be also due to point 3 from the previous section: to sum it up, I am picking the better performing stocks, especially for higher values of nr_years.
 
-Once again, it is worth noticing that this is not the optimal setup for the ETFs, since they perform in a better way on longer time periods. Nonetheless, they outperform stocks, which is even more impressive since I did not model [the risk of companies being delisted](###### This analysis favors stocks).
+Once again, it is worth noticing that this is not the optimal setup for the ETFs, since they perform in a better way on longer time periods. Nonetheless, they outperform stocks, which is even more impressive since I did not model [the risk of companies being delisted](######this-analysis-favors-stocks).
 ##### Probability of returns being negative
 ![image](https://github.com/user-attachments/assets/12c4eefb-5294-4337-b6ba-c64dd73dd654)
 ![image](https://github.com/user-attachments/assets/651a26e7-bb00-4266-a44b-baad4b8fa2aa)
@@ -879,7 +879,7 @@ The heatmaps from this section show the probability the investment returns are n
 
 First and foremost, even though the color scale on the two plots might make the probability ranges look similar, the worst values in the ETF plot are green in the stocks one, meaning that the best values in the stocks plot (deep green) are in the order of the worst ones in the ETF heatmap (deep red). This is due to the nature of the financial tools which we simulated our investment on: an ETF diversifies and reduces volatility, sort of "capping" max and min returns. A stock investment offers, potentially, higher returns, the point is that higher rewards mean higher risks, thus there is a higher probability of getting lower returns as well compared to the ETF investment.
 
-Overall, the higher the number of years an investment is made on, the lower the probability of it "being negative" and this might be due to the same two reasons justifying the good performance of the lower-right part of [the previous heatmap](#####Probability%20stock%20returns%20>%20ETF%20returns) (on > nr_years, the risk profile of bigger sized portfolios get similar to the ETFs one and I picked the very best stocks when simulating, especially on > nr_years). 
+Overall, the higher the number of years an investment is made on, the lower the probability of it "being negative" and this might be due to the same two reasons justifying the good performance of the lower-right part of [the previous heatmap](#####probability-stock-returns->-ETF-returns) (on > nr_years, the risk profile of bigger sized portfolios get similar to the ETFs one and I picked the very best stocks when simulating, especially on > nr_years). 
 Interestingly, the higher the number of stocks, the worse the performance of the stock investment seems to get, possibly because equally weighing the investment on a higher number of stocks might be dampening the higher returns you get if you go all-in on a smaller number of stocks performing better.  
 Finally, the ETF heatmap shows that, provided you invest on ETFs for at least 3 years, the probability of getting back less money than the one you initially invested is 3% on average: only 3 investments out of 100 get "bad" results in these settings. 
 ###### Visualizing the probability distributions: ETFs
@@ -891,15 +891,15 @@ Overall, 12% of the simulations returned an amount of money < 1000 euros, in acc
 ![image](https://github.com/user-attachments/assets/87af40cd-761d-4bce-a6b1-4feff42f541a)
 For better readability, the x-axis ranges from 0 (the theoretical minimum possible investment return) to the maximum amount returned by the ETF investment, even in the case of the stocks plot.
 
-As expected, the difference with respect to the previous plot is striking: this distribution seems normal and centered around 1000, whilst previously the ETF distribution had its maximum frequency at 1100. Furthermore, the "negative" returns values have fairly higher frequencies with respect to what happened with ETFs, confirming what was observed when looking at [these heatmaps](#####Probability%20of%20returns%20being%20negative).
+As expected, the difference with respect to the previous plot is striking: this distribution seems normal and centered around 1000, whilst previously the ETF distribution had its maximum frequency at 1100. Furthermore, the "negative" returns values have fairly higher frequencies with respect to what happened with ETFs, confirming what was observed when looking at [these heatmaps](#####probability-of-returns-being-negative).
 
 
 ###### plotnr13
 
 [Index](#index) | [Prev plot](#plotnr12) | [More plots](#plotnr12)
 ![image](https://github.com/user-attachments/assets/f1d3b9b6-0c4b-448b-ad27-db53b880a035)
-Picking the best and worst cases from the [stocks heatmap](#####Probability%20of%20returns%20being%20negative), we can visualize and compare their distribution with respect to the one referring to the whole df (black). 
-In the green best case [(9 stocks, 5 years of investments)](#####Probability%20of%20returns%20being%20negative), the probability distribution looks fairly more spread out than in the red worst one [(13 stocks, 2 years of investments)](#####Probability%20of%20returns%20being%20negative). These distributions are, as expected, respectively better and worse than the black line when visually considering the probability of returns being negative. 
+Picking the best and worst cases from the [stocks heatmap](#####probability-of-returns-being-negative), we can visualize and compare their distribution with respect to the one referring to the whole df (black). 
+In the green best case [(9 stocks, 5 years of investments)](#####probability-of-returns-being-negative), the probability distribution looks fairly more spread out than in the red worst one [(13 stocks, 2 years of investments)](#####probability-of-returns-being-negative). These distributions are, as expected, respectively better and worse than the black line when visually considering the probability of returns being negative. 
 Looking at the red worst curve, it is centered around 800 and most of the higher frequencies are found in the negative part of it. On the other hand, the best curve shows lower frequencies in the negative part of the chart while displaying fairly higher ones in the positive part of it.
 ##### ETFs vs stocks: comparing best and worst performances
 ![image](https://github.com/user-attachments/assets/71708693-7da4-4c51-b2cc-f22a77fa7494)
