@@ -9,7 +9,7 @@ This website is about some of the projects that I completed and the skills that 
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * 💥NEW💥 [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
-* 💥EVEN NEWER!!!💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#rolling-the-dice-on-wall-street:-building-and-optimizing-a-portfolio-simulator💵🎢)
+* 💥EVEN NEWER!!!💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#rolling-the-dice-on-wall-street:-building-and-optimizing-a-portfolio-simulator)
 
 # Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
@@ -597,7 +597,7 @@ In particular, the first plot shows the grouping of the samples when **linkage =
 # Speeding up montecarlo simulations using Neural Networks ♠️♥️♣️♦️🧠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` `#Pytorch` 
 
-[Index](#index) | 
+[Index](#index) | [Next project](#rolling-the-dice-on-wall-street:-building-and-optimizing-a-portfolio-simulator) 
 
 #### Project description and goal
 This is a project where I had a lot of fun. I used data structures to create functions simulating events, I computed the probability of complex events by random sampling and then I trained a neural network which sped up my simulations. 
@@ -700,7 +700,7 @@ As stated in the powerball project, the structures and scripts used in this proj
 #### Sources
 - `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia`
 
-# Rolling the dice on Wall Street: building and optimizing a portfolio simulator 💵🎢 
+# Rolling the dice on Wall Street: building and optimizing a portfolio simulator
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Polars` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` 
 
 [Index](#index) | 
@@ -797,7 +797,7 @@ This is one of the ways in which the code will be optimized: since the "^" opera
 4. Store the data in a df.
 ```
 #### Simulation optimization
-# PIC 1
+![image](https://github.com/user-attachments/assets/770cf9c1-00fa-4149-abf0-817ce08bd1cb)
 
 When optimizing code, I came up with several different versions of the simulator, whose performances are all listed in the pic above. 
 The following are the test cases that were considered:
@@ -855,7 +855,7 @@ The way the simulator works, it favors stocks in 3 ways:
 
 With this said, let us look at some cool plots.
 ##### Probability stock returns > ETF returns
-# PIC 2
+![image](https://github.com/user-attachments/assets/8cd0283a-60cb-4e3f-9ec5-5e86287e324f)
 
 As for the plots that will follow, the heatmap above was created on about 5 millions data points (i.e. df rows). Since there are 48 (nr_years, nr_stocks) combinations, about 100k data points for each of them were used in the data analysis.
 
@@ -869,8 +869,8 @@ In my opinion, the (relatively) good performance of the stock investments for po
 
 Once again, it is worth noticing that this is not the optimal setup for the ETFs, since they perform in a better way on longer time periods. Nonetheless, they outperform stocks, which is even more impressive since I did not model [the risk of companies being delisted](###### This analysis favors stocks).
 ##### Probability of returns being negative
-# PIC 3
-# PIC 4
+![image](https://github.com/user-attachments/assets/12c4eefb-5294-4337-b6ba-c64dd73dd654)
+![image](https://github.com/user-attachments/assets/651a26e7-bb00-4266-a44b-baad4b8fa2aa)
 
 The heatmaps from this section show the probability the investment returns are negative in all the simulations settings. Just to be clear, "negative" means the investment returned an amount of money < than 1000 euros, the initial investment.
 
@@ -880,22 +880,22 @@ Overall, the higher the number of years an investment is made on, the lower the 
 Interestingly, the higher the number of stocks, the worse the performance of the stock investment seems to get, possibly because equally weighing the investment on a higher number of stocks might be dampening the higher returns you get if you go all-in on a smaller number of stocks performing better.  
 Finally, the ETF heatmap shows that, provided you invest on ETFs for at least 3 years, the probability of getting back less money than the one you initially invested is 3% on average: only 3 investments out of 100 get "bad" results in these settings. 
 ###### Visualizing the probability distributions: ETFs
-# PIC 5
+![image](https://github.com/user-attachments/assets/d542fe11-701e-4dd3-8d2e-c32766241b6c)
 The lineplot above displays how many simulations fall in each investment return bin. Each return bin is upper-end inclusive, meaning that finding 600 as an x-axis coordinate is equivalent to considering the (500-600] euros bin. It is worth noticing that return values might be repeated due to the way the simulations were performed.
 
 Overall, 12% of the simulations returned an amount of money < 1000 euros, in accordance with the ETF heatmap from the previous section (where you can roughly average the probabilities you find in the heatmap, since each heatmap box is computed on roughly the same amount of simulations). 
 ###### Visualizing the probability distributions: stocks best and worst cases
-# PIC 6
+![image](https://github.com/user-attachments/assets/87af40cd-761d-4bce-a6b1-4feff42f541a)
 For better readability, the x-axis ranges from 0 (the theoretical minimum possible investment return) to the maximum amount returned by the ETF investment, even in the case of the stocks plot.
 
 As expected, the difference with respect to the previous plot is striking: this distribution seems normal and centered around 1000, whilst previously the ETF distribution had its maximum frequency at 1100. Furthermore, the "negative" returns values have fairly higher frequencies with respect to what happened with ETFs, confirming what was observed when looking at [these heatmaps](##### Probability of returns being negative).
 
-# PIC 7
+![image](https://github.com/user-attachments/assets/f1d3b9b6-0c4b-448b-ad27-db53b880a035)
 Picking the best and worst cases from the [stocks heatmap](##### Probability of returns being negative), we can visualize and compare their distribution with respect to the one referring to the whole df (black). 
 In the green best case [(9 stocks, 5 years of investments)](##### Probability of returns being negative), the probability distribution looks fairly more spread out than in the red worst one [(13 stocks, 2 years of investments)](##### Probability of returns being negative). These distributions are, as expected, respectively better and worse than the black line when visually considering the probability of returns being negative. 
 Looking at the red worst curve, it is centered around 800 and most of the higher frequencies are found in the negative part of it. On the other hand, the best curve shows lower frequencies in the negative part of the chart while displaying fairly higher ones in the positive part of it.
 ##### ETFs vs stocks: comparing best and worst performances
-# PIC 8
+![image](https://github.com/user-attachments/assets/71708693-7da4-4c51-b2cc-f22a77fa7494)
 
 Note well: for the sake of the analysis, the best and worst returns values are not repeated.
 
