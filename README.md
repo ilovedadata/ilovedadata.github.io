@@ -597,7 +597,7 @@ In particular, the first plot shows the grouping of the samples when **linkage =
 # Speeding up montecarlo simulations using Neural Networks ♠️♥️♣️♦️🧠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` `#Pytorch` 
 
-[Index](#index) | [Next project](#Building-and-optimizing-a-portfolio-simulator) 
+[Index](#index) | [Next project](#Building-and-optimizing-a-portfolio-simulator-) 
 
 #### Project description and goal
 This is a project where I had a lot of fun. I used data structures to create functions simulating events, I computed the probability of complex events by random sampling and then I trained a neural network which sped up my simulations. 
