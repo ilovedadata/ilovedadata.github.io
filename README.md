@@ -706,7 +706,8 @@ As stated in the powerball project, the structures and scripts used in this proj
 [Index](#index) | 
 #### Project description and goal
 This project was used as an excuse to become more proficient in using Polars. In particular, I used this library to optimize as much as possible a simulation loop, so as to perform as many simulations as I could in a given amount of time. 
-This idea was born whilst rewiring an analysis by Paolo Coletti, whose works on investments are special, check them out on his Youtube channel!
+This idea was born whilst re-creating from the ground up an analysis by Paolo Coletti: as it often happens to me with novel ideas, I created something new and I ended up in a totally different direction from the one I thought I would. Nontheless, I hope this project will interest the reader as much as it interested me (honestly, I think this one turned out to be pretty cool!). 
+P.S. Paolo's works on investments are special, check them out on his Youtube channel.
 
 Overall, during this project I used yahoo finance to download stock prices, I computed their yields and I performed random simulations about different sized stocks portfolios, finally comparing their performance to the one of another investment strategy, namely ETF-and-chill investments. The analytical part of this project was completed by using Pandas and Numpy in addition to Polars, whilst the plots were created using Matplotlib and Seaborn. 
 The basic steps of the simulation are the ones that follow:
