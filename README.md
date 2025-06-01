@@ -855,6 +855,9 @@ The way the simulator works, it favors stocks in 3 ways:
 
 With this said, let us look at some cool plots.
 ##### Probability stock returns > ETF returns
+###### plotnr12
+
+[Index](#index) | [Prev plot](#plotnr11) | [More plots](#plotnr13) 
 ![image](https://github.com/user-attachments/assets/8cd0283a-60cb-4e3f-9ec5-5e86287e324f)
 
 As for the plots that will follow, the heatmap above was created on about 5 millions data points (i.e. df rows). Since there are 48 (nr_years, nr_stocks) combinations, about 100k data points for each of them were used in the data analysis.
@@ -890,6 +893,10 @@ For better readability, the x-axis ranges from 0 (the theoretical minimum possib
 
 As expected, the difference with respect to the previous plot is striking: this distribution seems normal and centered around 1000, whilst previously the ETF distribution had its maximum frequency at 1100. Furthermore, the "negative" returns values have fairly higher frequencies with respect to what happened with ETFs, confirming what was observed when looking at [these heatmaps](#####Probability%20of%20returns%20being%20negative).
 
+
+###### plotnr13
+
+[Index](#index) | [Prev plot](#plotnr12) | [More plots](#plotnr12)
 ![image](https://github.com/user-attachments/assets/f1d3b9b6-0c4b-448b-ad27-db53b880a035)
 Picking the best and worst cases from the [stocks heatmap](#####Probability%20of%20returns%20being%20negative), we can visualize and compare their distribution with respect to the one referring to the whole df (black). 
 In the green best case [(9 stocks, 5 years of investments)](#####Probability%20of%20returns%20being%20negative), the probability distribution looks fairly more spread out than in the red worst one [(13 stocks, 2 years of investments)](#####Probability%20of%20returns%20being%20negative). These distributions are, as expected, respectively better and worse than the black line when visually considering the probability of returns being negative. 
