@@ -9,7 +9,7 @@ This website is about some of the projects that I completed and the skills that 
 * [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * Currently studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * 💥NEW💥 [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
-* 💥EVEN NEWER!!!💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#rolling-the-dice-on-wall-street:-building-and-optimizing-a-portfolio-simulator)
+* 💥EVEN NEWER!!!💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator)
 
 # Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
@@ -597,7 +597,7 @@ In particular, the first plot shows the grouping of the samples when **linkage =
 # Speeding up montecarlo simulations using Neural Networks ♠️♥️♣️♦️🧠
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` `#Pytorch` 
 
-[Index](#index) | [Next project](#rolling-the-dice-on-wall-street:-building-and-optimizing-a-portfolio-simulator) 
+[Index](#index) | [Next project](#Building-and-optimizing-a-portfolio-simulator) 
 
 #### Project description and goal
 This is a project where I had a lot of fun. I used data structures to create functions simulating events, I computed the probability of complex events by random sampling and then I trained a neural network which sped up my simulations. 
@@ -700,7 +700,7 @@ As stated in the powerball project, the structures and scripts used in this proj
 #### Sources
 - `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia`
 
-# Rolling the dice on Wall Street: building and optimizing a portfolio simulator
+# Building and optimizing a portfolio simulator
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Polars` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` 
 
 [Index](#index) | 
@@ -809,7 +809,7 @@ step = 2
 n = range(3,14,step)
 ```
 ##### The most important part of the simulation cycle
-It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](<#####Simulator Pseudocode>). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
+It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](#####simulator-pseudocode). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
 ##### Unavoidable randomness slows down the simulation
 The way the code is written, there is a part of the process that one cannot avoid from being influenced by randomness: once the rate of return is computed in point 3, the rows containing them need to be appended to the "whole" df, where you are storing the results. Unluckily, there is a catch and, to get it, let's make an example considering k = 5, n = 11:
 - Your df will look like the one from the [Simulator Logic](######Simulator logic) section, except you will have more columns (one per stock you compute the returns of), thus 11;
