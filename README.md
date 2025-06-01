@@ -748,12 +748,12 @@ To understand how the simulator works, let us first visualize how data is stored
 | 6550  | 150.00        |
 
 In order to compute the returns of the Asset over a given period of time, we need to first get its rate of return. To compute the latter, we simply divide the asset value on a given day by the value it had k days (or months, or years) before and subtract one to it, with k being the days/months/years over which we are interested in computing the rate of returns. 
+```math
+RateOfReturn_{kYears} = (AssetValue_{Today}/AssetValue_{kYears} - 1)
+```
+For instance, the following table displays the computations that a single simulation performs for a given period of time, say k=5 years. Take the 1310th row: the rate of returns is 20% because (120/100 - 1). 
 
-$$RateOfReturn_{kYears} = (AssetValue_{Today}/AssetValue_{kYears} - 1)$$
-
-For instance, the following table displays the computations that a single simulation performs for a given period of time, say k=5 years. Take the 1310th row: the rate of returns is 20% because $(120/100 - 1)$. 
-
-How do we get these numbers though? Well, the 1310th row tells us that, on a given day happening 1310 days after the first row ($AssetValue_{kYears}$), a certain stock was traded for 120 € ($AssetValue_{Today}$). Why 1310? if k=5 years, $1310 = 5*262$, with 262 being the days the stock market is opened per year. If we find nan values, it means there was no value for the asset k days/years/months before (i.e. there was no $AssetValue_{kYears}$).
+How do we get these numbers though? Well, the 1310th row tells us that, on a given day happening 1310 days after the first row (AssetValue_kYears), a certain stock was traded for 120 € (AssetValue_Today). Why 1310? if k=5 years, 1310 = 5*262, with 262 being the days the stock market is opened per year. If we find nan values, it means there was no value for the asset k days/years/months before (i.e. there was no AssetValue_kYears).
 
 | Index | Asset Value (€) | 5-Year Rate of Returns (%) | Annualized Rate (%) | Returns (€) |
 | ----- | --------------- | -------------------------- | ------------------- | ----------- |
@@ -769,25 +769,31 @@ How do we get these numbers though? Well, the 1310th row tells us that, on a giv
 This computation is exactly what the Pandas `pct_change()` function performs, thus this is the function powering the simulator in the Pandas section of the code determining the **k-year rate of return**.
 
 Once we have it, we are able to compute the **annualized rate(%)**, using the following formula:
-
-$annualized_{rate} = (1 + actual_{rate})^{1/k} - 1$
-
+```math
+annualized_{rate} = (1 + actual_{rate})^{1/k} - 1
+```
 When using the **k-year rate of return** as the actual rate, the formula smoothens the returns over the period we are considering, giving us the constant annual growth rate we had over the considered period of time. For instance, looking at the 1311th row, getting a return of 15.12% after 5 years means getting a 2.86% yearly return at the end of each of the five years.
 
 Finally, to get the **Returns** (the amount of money we obtain from our investment) we use the formula for the compound interest: 
-
-$M = C*(1 + annualized_{rate})^{k}$
-
-Where $C$ is the amount of money we invested (1000 € in this case) and the $annualized_{rate}$ is the one coming from the formula above. $k$ represents, as in the previous formula, the amount of years we commit to invest our money for.
+```math
+M = C*(1 + annualized_{rate})^{k}
+```
+Where C is the amount of money we invested (1000 € in this case) and the annualized_rate is the one coming from the formula above. k represents, as in the previous formula, the amount of years we commit to invest our money for.
 ###### Speeding stuff up
 From the computations above it is clear that, if calculating the returns is the end goal of the simulation, we can do so in one pass:
 
 Since: 
-$annualized_{rate} = (1 + actual_{rate})^{1/k} - 1$
-Then: $M = C*(1 + annualized_{rate})^{k} = C*(1 + (1 + actual_{rate})^{1/k} - 1)^{k}$
+```math
+annualized_{rate} = (1 + actual_{rate})^{1/k} - 1
+```
+Then: 
+```math
+M = C*(1 + annualized_{rate})^{k} = C*(1 + (1 + actual_{rate})^{1/k} - 1)^{k}
+```
 So:
-$M = C*(1 + actual_{rate})$
-
+```
+M = C*(1 + actual_{rate})
+```
 This is one of the ways in which the code will be optimized: since the "^" operator is particularly expensive in terms of computation time,  finding M in the latter way helps to speed things up.
 ##### Simulator Pseudocode
 ```
