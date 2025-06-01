@@ -808,7 +808,7 @@ step = 2
 n = range(3,14,step)
 ```
 ##### The most important part of the simulation cycle
-It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](#####Simulator Pseudocode). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
+It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](<#####Simulator Pseudocode>). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
 ##### Unavoidable randomness slows down the simulation
 The way the code is written, there is a part of the process that one cannot avoid from being influenced by randomness: once the rate of return is computed in point 3, the rows containing them need to be appended to the "whole" df, where you are storing the results. Unluckily, there is a catch and, to get it, let's make an example considering k = 5, n = 11:
 - Your df will look like the one from the [Simulator Logic](######Simulator logic) section, except you will have more columns (one per stock you compute the returns of), thus 11;
