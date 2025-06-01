@@ -6,7 +6,7 @@ This website is about some of the projects that I completed and the skills that 
 * [Funky scraped stats](#funky-stats-about-naruto-) 
 * [House inventory fallout terminal](#house-terminal-inventory-system-) 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
-* [My solutions to the 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
+* [My solutions to a (pretty challenging) 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * I'm often studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
 * 💥NEW💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator-)
@@ -791,7 +791,7 @@ Then:
 M = C*(1 + annualized_{rate})^{k} = C*(1 + (1 + actual_{rate})^{1/k} - 1)^{k}
 ```
 So:
-```
+```math
 M = C*(1 + actual_{rate})
 ```
 This is one of the ways in which the code will be optimized: since the "^" operator is particularly expensive in terms of computation time,  finding M in the latter way helps to speed things up.
