@@ -257,9 +257,6 @@ The terminal has been implemented as follows:
 
 The following picture shows how the Fallout terminal appears to the user.
 
-###### plotnr3
-  
-[Index](#index) | [Prev plot](#plotnr2) | [More plots](#plotnr4) 
 ![FalloutTerminal](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/64b06a75-5c4f-4dc7-a7a7-b08104bfe0a3)
 
 #### Possible future developments
@@ -422,9 +419,6 @@ $y = 1 * X + 2 * X^2 + 3 * X^3 + e$
 
 **Forward and Backward stepwise selection** are two methods that aim at selecting the subset of features that are most related to the response and that, thus, let you create a **good** performing model. Why good and not **best**? Because they are not guaranteed to find the best performing subset of predictors, given how they select them. To do so, one should use the best subset seleciton method (see the source code for more details).
 
-###### plotnr4
-  
-[Index](#index) | [Prev plot](#plotnr3) | [More plots](#plotnr5) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/ab1b459a-46cf-48fa-bf93-02915486da9b)
 The pictures above display the results of, respectively, **Forward and Backward stepwise selection**. In this particular application, The first algorithm performs better than the second one and we can see it from three indicators:
 - **The variables chosen**: whilst the backward stepwise selection algorithm selects 6 features, missing $X^2$, which is in fact included in the original algorithm, the forward stepwise selection method selects the correct subset of features.
@@ -457,9 +451,9 @@ For any given number of features, the best performing model is selected (EX: num
 ##### Some cool stuff from the Exercises
 ###### 9 b Visualizing models up to the 20th degree
 
-###### plotnr5
+###### plotnr3
   
-[Index](#index) | [Prev plot](#plotnr4) | [More plots](#plotnr6) 
+[Index](#index) | [Prev plot](#plotnr2) | [More plots](#plotnr4) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/70bebcf5-e2d4-4340-b2ed-5f4e7be282f2)
 The plot above shows polynomials of different degrees, as well as the data they were generated from.
 In particular, the data come from the Boston dataset, and the "dis" feature was used to predict the "nox" response.
@@ -467,9 +461,9 @@ Through a for cycle, 20 different models were generated, each containing a diffe
 
 ###### 12 Visualizing the convergence of coefficients estimated through backfitting
 
-###### plotnr6
+###### plotnr4
   
-[Index](#index) | [Prev plot](#plotnr5) | [More plots](#plotnr7) 
+[Index](#index) | [Prev plot](#plotnr3) | [More plots](#plotnr5) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/becc173e-a434-4569-a498-2204785dbbd0)
 The plot shows how the coefficients estimate varied whilst iterating the backfitting procedure. In this particular case, the coefficients reached a value closed to the final one at iteration 133 (there was a total of 200 iterations).
 
@@ -489,9 +483,9 @@ The plot shows how the coefficients estimate varied whilst iterating the backfit
 ##### Some cool stuff from the Exercises
 ###### 8 c 5-fold cross validation of a DecisionTreeRegressor()
 
-###### plotnr7
+###### plotnr5
   
-[Index](#index) | [Prev plot](#plotnr6) | [More plots](#plotnr8) 
+[Index](#index) | [Prev plot](#plotnr4) | [More plots](#plotnr6) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/e61c1278-72f5-425b-9ba0-80c5f17fa3cc)
 The plot visualizes the performance of a **DecisionTreeRegressor** in 100 different configurations. The two parameters whose value was tuned are the "max_depth" and the "max_features".
 The y-axis diplays the **Mean Squared Error** associated with each and every parameter configuration. For each parameter configuration, the plot shows the average performance on all the folds as well as the performance on each fold.
@@ -499,9 +493,9 @@ Finally, a red dot highlights the configuration having the **lowest MSE**.
 
 ###### 12 Visualizing how Recall varies as a function of the probability threshold
 
-###### plotnr8
+###### plotnr6
   
-[Index](#index) | [Prev plot](#plotnr7) | [More plots](#plotnr9) 
+[Index](#index) | [Prev plot](#plotnr5) | [More plots](#plotnr7) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/be57df87-4d13-42f7-ac4e-a0ba182db805)
 The plot colors are relative to the following methods:
 - Yellow ➡️ **RandomForestRegressor()** with a "max_features" parameter >= 45
@@ -526,9 +520,9 @@ As expected, lowering the threshold means increasing the **recall** (as a low pr
 ##### Some cool stuff from the Exercises
 ###### 5 e-f Visualizing the classification made by a Logistic Regression fit on polynomial data
 
-###### plotnr9
+###### plotnr7
   
-[Index](#index) | [Prev plot](#plotnr8) | [More plots](#plotnr10) 
+[Index](#index) | [Prev plot](#plotnr6) | [More plots](#plotnr8) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/08bc4d39-5dbc-401d-a1fa-c649cf53a432)
 The plot above shows how a **Logistic Regression** model classifies observations when fit on features transformed up to the 4th degree. The legend of the plots shows the confusion matrix and, as it is evident from the plots, while the **performance improves significantly from degree 1 to degree 2**, the same is not true for the higher degrees. As a matter of fact, the confusion matrix keeps on being equal (actually, this happens up to degree 12).
 
@@ -553,17 +547,17 @@ As it is evident from the picture, the accuracy of the model is higher when the 
 ##### Some cool stuff from the Exercises
 ###### 6 c,d Visualizing Gradient Descent
 
-###### plotnr10
+###### plotnr8
 
-[Index](#index) | [Prev plot](#plotnr9) | [More plots](#plotnr11) 
+[Index](#index) | [Prev plot](#plotnr7) | [More plots](#plotnr9) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/78a7a6e2-ecc5-443c-bb15-5bc503d53790)
 The plot above shows how **Gradient Descent** finds a local minimum of a sin function. As expected, the **local minimum** that is found by gradient descent depends on the initial **starting point**. Furthermore, it is possible to verify visually that the bigger is the slope of the function, the bigger is the step taken by the gradient descent.
 
 ###### 13 The performance of a Neural Network as a function of the neurons in its hidden units
 
-###### plotnr11
+###### plotnr9
 
-[Index](#index) | [Prev plot](#plotnr10) | [More plots](#plotnr12) 
+[Index](#index) | [Prev plot](#plotnr8) | [More plots](#plotnr10) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/661ca54c-0632-4c3e-a86c-169adf38e8de)
 This plot displays the performance of a **Neural Network** as a function of the number of the neurons in its 3 linear **hidden layers**.
 The **colors** of the plot highlight the different number of neurons in each of the different (4) **architectures tested**. 
@@ -592,9 +586,9 @@ P.S.: the process of manipulating the dataframe to demonstrate such a thing has 
 
 ###### 13 b How the linkage method changes the appearance of a dendrogram
 
-###### plotnr12
+###### plotnr10
 
-[Index](#index) | [Prev plot](#plotnr11) | [More plots](#plotnr13) 
+[Index](#index) | [Prev plot](#plotnr9) | [More plots](#plotnr11) 
 ![image](https://github.com/ilovedadata/ilovedadata.github.io/assets/106730909/81e42c5e-d614-4ce7-a560-80a3b1b367cd)
 This plot displays the different ways in which the **Hierarchical Clustering** algorithm groups together the observations according to the linkage **method** used, i.e. according to how the distance between observations is computed.
 In particular, the first plot shows the grouping of the samples when **linkage = "complete"**, the bottom pic displays how observations are clustered if **linkage = "average"**.
@@ -676,9 +670,9 @@ For what concerns the architecture of the neural network, I used 3 linear layers
 
 The following plots sum up the results I got in the optimization loop, in which I trained 5 different nn on 20 epochs. In the first plot, both the training and the validation cross entropy loss are plotted as a function of the epoch number: in the end, the 64 hidden neurons nn seems to be the best performing one.
 
-###### plotnr13
+###### plotnr11
 
-[Index](#index) | [Prev plot](#plotnr12)
+[Index](#index) | [Prev plot](#plotnr10) | [More plots](#plotnr12) 
 ![Pic(7)](https://github.com/user-attachments/assets/df651fc8-6c3a-4ac8-9960-6355b4344075)
 
 The second plot shows (left part) the hands that the models misclassified out of the 54000 in the test set. Impressively, the 64 hidden neurons model misclassifies just 11 of them. On the right part, a neat stat: the most frequently misclassified "hand" by the model. If we consider the best performing model, most of the 11 misclassified hands are straights.
@@ -703,7 +697,214 @@ It is true that creating the df for a nn-montecarlo simulation takes more than i
 #### Possible future developments
 As stated in the powerball project, the structures and scripts used in this project can possibly be used in the future to simulate other kinds of gamble games/casino games. Furthermore, the functions I wrote to perform "normal" montecarlo simulations might still be optimized, thus time taken to perform the simulations might decrease again. The same can be said about the df creation part of the nn simulations: optimizing data storage might decrease the overall simulation time even more!
 #### Sources
-- `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia
+- `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia`
+
+# Rolling the dice on Wall Street: building and optimizing a portfolio simulator 💵🎢 
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Polars` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` 
+
+[Index](#index) | 
+#### Project description and goal
+This project was used as an excuse to become more proficient in using Polars. In particular, I used this library to optimize as much as possible a simulation loop, so as to perform as many simulations as I could in a given amount of time. 
+This idea was born whilst rewiring an analysis by Paolo Coletti, whose works on investments are special, check them out on his Youtube channel!
+
+Overall, during this project I used yahoo finance to download stock prices, I computed their yields and I performed random simulations about different sized stocks portfolios, finally comparing their performance to the one of another investment strategy, namely ETF-and-chill investments. The analytical part of this project was completed by using Pandas and Numpy in addition to Polars, whilst the plots were created using Matplotlib and Seaborn. 
+The basic steps of the simulation are the ones that follow:
+- Determine how much money you want to invest;
+- Pick a number of years you want to invest your money for;
+- Pick a number of stocks you would like to have in your portfolio and randomly choose them;
+- Compute the stocks returns and the ETF returns;
+- Repeat the three steps above a _lot_ of times to get statistically significant data about the investments performance.
+
+As stated before, after creating a working "version 1.0" of the simulator, I will try to optimize its performance as much as possible through the course of the following sections. In the end, after doing so for several combinations of years of investments (nr_years) and number of stocks (nr_stocks), I will analyze data and draw conclusions. The goal is, in addition to optimization, *visualizing* how returns are affected by the financial tool you choose to invest on, by by the years you invest your money for and, in the case of stocks, by the portfolio size (i.e. by the "number" of stocks you invest on). 
+#### How does the simulator work?
+##### Data and Simulator logic
+###### Getting data
+First and foremost, the simulator needs data to work with. Since we have to compare stocks vs a global ETF (the latter being represented by an MSCI world Index), we need data about the daily values of these financial tools:
+* For what concerns the **ETF**, the data was obtained from Paolo's Github.
+* For what concerns **stocks**, the process has been tricker. In particular, for the sake of this project, I downloaded all the tickers from the NASDAQ stock exchange and used them as an input for the yahoo finance download function. In this way, I obtained the daily values of stocks on the NASDAQ in a given time period, (which is, obviously, the same period I considered for the ETF daily values, namely start="1999-01-04", end="2024-12-31").
+
+As I started to do in this section, I will refer to the global index daily values and returns as ETF daily values and returns since, during this project, I proved (even though I did not include it in this portfolio) that ETFs tracking a given index are unsurprisingly able to replicate its returns.
+###### Simulator logic
+To understand how the simulator works, let us first visualize how data is stored in the DataFrame that will be the "engine" of this project. Say "Asset" is any of the stocks/ETFs whose daily values you downloaded:
+
+| Index | Asset Value (€) |
+|-------|----------------|
+| 0     | 100.00        |
+| 1     | 102.50        |
+| ...   | ...           |
+| 1310  | 120.00        |
+| 1311  | 118.00        |
+| ...   | ...           |
+| 2620  | 125.00        |
+| 2621  | 124.50        |
+| ...   | ...           |
+| 3930  | 140.00        |
+| 3931  | 138.50        |
+| ...   | ...           |
+| 5240  | 145.00        |
+| 5241  | 144.00        |
+| ...   | ...           |
+| 6550  | 150.00        |
+
+In order to compute the returns of the Asset over a given period of time, we need to first get its rate of return. To compute the latter, we simply divide the asset value on a given day by the value it had k days (or months, or years) before and subtract one to it, with k being the days/months/years over which we are interested in computing the rate of returns. 
+
+$RateOfReturn_{kYears} = (AssetValue_{Today}/AssetValue_{kYears} - 1)$
+
+For instance, the following table displays the computations that a single simulation performs for a given period of time, say k=5 years. Take the 1310th row: the rate of returns is 20% because $(120/100 - 1)$. 
+
+How do we get these numbers though? Well, the 1310th row tells us that, on a given day happening 1310 days after the first row ($AssetValue_{kYears}$), a certain stock was traded for 120 € ($AssetValue_{Today}$). Why 1310? if k=5 years, $1310 = 5*262$, with 262 being the days the stock market is opened per year. If we find nan values, it means there was no value for the asset k days/years/months before (i.e. there was no $AssetValue_{kYears}$).
+
+| Index | Asset Value (€) | 5-Year Rate of Returns (%) | Annualized Rate (%) | Returns (€) |
+| ----- | --------------- | -------------------------- | ------------------- | ----------- |
+| 0     | 100.00          | NaN                        | NaN                 | NaN         |
+| 1     | 102.50          | NaN                        | NaN                 | NaN         |
+| ...   | ...             | ...                        | ...                 | ...         |
+| 1310  | 120.00          | 20.00                      | 3.71                | 1200.00     |
+| 1311  | 118.00          | 15.12                      | 2.86                | 1151.42     |
+| ...   | ...             | ...                        | ...                 | ...         |
+| 2620  | 125.00          | 4.17                       | 0.82                | 1041.78     |
+| ...   | ...             | ...                        | ...                 | ...         |
+
+This computation is exactly what the Pandas `pct_change()` function performs, thus this is the function powering the simulator in the Pandas section of the code determining the **k-year rate of return**.
+
+Once we have it, we are able to compute the **annualized rate(%)**, using the following formula:
+
+$annualized_{rate} = (1 + actual_{rate})^{1/k} - 1$
+
+When using the **k-year rate of return** as the actual rate, the formula smoothens the returns over the period we are considering, giving us the constant annual growth rate we had over the considered period of time. For instance, looking at the 1311th row, getting a return of 15.12% after 5 years means getting a 2.86% yearly return at the end of each of the five years.
+
+Finally, to get the **Returns** (the amount of money we obtain from our investment) we use the formula for the compound interest: 
+
+$M = C*(1 + annualized_{rate})^{k}$
+
+Where $C$ is the amount of money we invested (1000 € in this case) and the $annualized_{rate}$ is the one coming from the formula above. $k$ represents, as in the previous formula, the amount of years we commit to invest our money for.
+###### Speeding stuff up
+From the computations above it is clear that, if calculating the returns is the end goal of the simulation, we can do so in one pass:
+
+Since: 
+$annualized_{rate} = (1 + actual_{rate})^{1/k} - 1$
+Then: $M = C*(1 + annualized_{rate})^{k} = C*(1 + (1 + actual_{rate})^{1/k} - 1)^{k}$
+So:
+$M = C*(1 + actual_{rate})$
+
+This is one of the ways in which the code will be optimized: since the "^" operator is particularly expensive in terms of computation time,  finding M in the latter way helps to speed things up.
+##### Simulator Pseudocode
+```
+1. Set the simulations constants, namely the amount you want to invest (C) and the number of simulations you want in your df for each (nr_years, nr_stocks) combination;
+2. Loop through each (nr_years, nr_stocks) combination; 
+3. Pick random tickers (quantity = nr_stocks) and compute the returns of the (nr_stocks) stocks and of the ETFs during the (nr_years) period;
+4. Store the data in a df.
+```
+#### Simulation optimization
+# PIC 1
+
+When optimizing code, I came up with several different versions of the simulator, whose performances are all listed in the pic above. 
+The following are the test cases that were considered:
+``` python
+# years_of_investments
+k = [0.25,0.5,0.75,1.,2.,3.,4.,5]
+# number_of_stocks
+step = 2
+n = range(3,14,step)
+```
+##### The most important part of the simulation cycle
+It is important to stress that the core part of the simulation, i.e. the one determining the results and the one driving the time complexity of it, is point 3 from [Simulator Pseudocode](#####Simulator Pseudocode). In it, thanks at first to Pandas ufuncs and then to Polars, the yearly rate of returns of the stocks are computed for each of the rows of the df (thus, potentially, for each day between 1999-01-04" and 2024-12-31).
+##### Unavoidable randomness slows down the simulation
+The way the code is written, there is a part of the process that one cannot avoid from being influenced by randomness: once the rate of return is computed in point 3, the rows containing them need to be appended to the "whole" df, where you are storing the results. Unluckily, there is a catch and, to get it, let's make an example considering k = 5, n = 11:
+- Your df will look like the one from the [Simulator Logic](######Simulator logic) section, except you will have more columns (one per stock you compute the returns of), thus 11;
+- When you compute the rate of returns randomly picking stocks, your df will have a *lot* of empty rows because, possibly, a given stock simply did not exist before a given date. This is especially true for higher number of stocks (since the more stocks you pick the higher the probability of picking one that was born recently) and for the higher the years of investments you simulate on (since it is more likely the period on which you compute the rate of returns on will include dates on which the stocks did not exist);
+- This means that, sometimes, you are not able to append any row to your df (point 4 of the [Simulator Pseudocode](#####Simulator Pseudocode)) and you have to keep on looping through your data, **causing the simulation time to increase**. The condition I imposed to append a row is that the maximum number of null columns (i.e. of null returns) in the given row has to be 1 meaning that, considering 11 stocks, each of the rows of the final df will have at least 10 stocks for which it was possible to compute a return on k = 5 years.
+
+For clarity, the performance of the simulator that is plotted in the picture from this section was tested without taking into account this randomness. As a matter of fact, the tests aimed at verifying how fast my code was at looping through the (nr_years, nr_stocks) combinations and at computing returns knowing that, the faster it was at doing so, the faster we would be able to append non-null rows to the final df.
+##### Some quick notes about the Pandas code optimization 
+- **ver_1.0**: its performance is not plotted because it is the very basic prototype of the portfolio simulator, unable to loop through the test cases and capable of computing returns just for a speicific (nr_years, nr_stocks) combination;
+- **ver_2.0**: this version achieves what the previous could not: by dynamically creating columns, it is able to loop through the test cases;
+- **ver_3.0**: in it I avoid a for loop and I use ufuncs instead to compute returns;
+- **ver_4.0**: in it I introduce and modify some checks at the beginning of the code that allow me to avoid running the whole simulation once I spot an empty and soon-to-be appended df;
+- **ver_4.05**: this version avoids copying dfs as much as possible and, instead, makes use of the .loc operator;  
+
+It is worth noticing that the best Pandas version achieved a `"real life" simulation time of 85 minutes for a one million rows df.
+##### Some quick notes about the Polars code optimization 
+- **ver_5.0**: my first attempt at Polars-izing the pandas code. The code is not very polished but still impressively faster than the very best Pandas version. `Total "real life" simulation time: 43 minutes;
+- **ver_5.1**: this version starts to make use of the lazy frames from Polars in several parts of the code. `Total "real life" simulation time: 41 minutes;
+- **ver_5.105**: in it I try to keep the df lazy for as long as possible. `Total "real life" simulation time: 38 minutes;
+- **ver_5.2**: in order to have a lazy df for even a longer time than in the previous version, I remove some of the checks performed at the beginning of the code that were introduced in **ver_4.0**. `Total "real life" simulation time: 32 minutes;
+- **ver_5.3**: in this version I get the best of both worlds: I introduce again the checks at the beginning of the code from **ver_4.0**, whilst keeping the df lazy for as long as possible. `Total "real life" simulation time: 25 minutes.  
+
+The fact version 5.2 is faster than 5.3 at testing the base cases but slower "in real life" is, I think, due to the fact that the performance test is not able to replicate the effect that randomness has on the simulations: by performing the checks from version 4.0 at the beginning of the code, I am able to avoid some expensive computations that occur later in the simulation cycle. Even though the checks might slow down a non-random simulation, they surely speed up a simulation in which you might randomly get a lot of null rows.
+
+Overall, the performance improvement achieved by using Polars is impressive. From version 2.0 to 5.3, the simulation time was reduced by more than a 30x factor when performance testing. 
+Furthermore, the same can be said about randomness-affected "real life" conditions: the very best Pandas code took 85 minutes while Polars took just 25 minutes to do the same operations. It is worth stressing the fact that I am in no way a Polars expert, whilst I have several years of experience using Pandas, thus I think my code in Polars is fairly more inefficient than the one written in Pandas and this makes Polars feats even more impressive.
+#### Data Analysis
+##### Some comments about the analysis setup
+As stated before, the goal of this project is to visualize how investments are affected by the financial tool choice, by the amount of time you invest your money for and by the portfolio size. The data analysis will compare the following situations:
+1. An investment on a varying amount of stocks;
+2. An all-in investment on a global index (i.e. on a world ETF).
+
+For what concerns point 1, the simulations were performed so that the initial amount invested was divided and equally weighted among the different stocks. This means that, given one invests 1000 euros on 2 stocks, 500 euros are invested in each of them. 
+
+The latter point is important in order to interpret the simulations results: as stated [here](###### Unavoidable randomness slows down the simulation), since during simulations I store rows containing at least a (nr_stocks-1) amount of stocks, thus the "bins" in the plots have to be interpreted as going from n-1 to n. For example, the nr_stocks = 11 bin contains simulations performed on rows containing 10 or 11 stock returns. 
+Furthermore, when a stock is missing, the amount of money that is invested is redistributed among the other non-missing stocks. EX: if one invests 1000 euros on 11 stocks but a stock is missing returns, for the sake of the simulation I will force the investment to be equally weighted on 10 stocks (100 euros each). 
+##### This analysis favors stocks
+The way the simulator works, it favors stocks in 3 ways:
+- First, during the simulation I analyse data "in hindsight", using the data that still exist today. This means that, since I downloaded NASDAQ stocks tickers in 1Q-2025, I only have data about stocks that still exist atm and I do not have evidence about delisted stocks, thus I cannot model the risk of investing in something that is not on the market anymore at the time of the analysis. 
+  This is favoring the stocks because I can simulate returns just on the stocks that performed decently enough not to be delisted from the stock exchange;
+- Second, since [unavoidable randomness slows down the simulation](###### Unavoidable randomness slows down the simulation), I had to consider a range of years of investments that did not cause my simulation time to explode. As explained in [this section](###### Unavoidable randomness slows down the simulation), the longer the considered period of time, the higher the probability of finding null rows, thus the need to "cap" the years of investments to 5 years. As explained by Paolo in several of his analyses, ETFs perform better on the longer time period (>=10 years), thus we are considering periods of time that are not optimal for their performance;
+- As explained in the last paragraph of the previous section, I am redistributing the investment on the stocks that do not have null returns, thus I am picking stocks that existed for a longer amount of time (this is especially true for increasing values of nr_years). Consequently, it would be fair to say that these stocks belong to a better performing cluster since they existed for a longer period of time while avoiding being delisted.
+
+With this said, let us look at some cool plots.
+##### Probability stock returns > ETF returns
+# PIC 2
+
+As for the plots that will follow, the heatmap above was created on about 5 millions data points (i.e. df rows). Since there are 48 (nr_years, nr_stocks) combinations, about 100k data points for each of them were used in the data analysis.
+
+The first thing that is evident is that the highest probability in any of the settings is 48%. To put it in another way, independently on the number of years and on the number of stocks considered, ETFs have more chance of producing higher returns.
+Furthermore, it is possible to spot two trends on the plot:
+1. The higher the number of stocks the worse the performance of the stock investment gets when compared to the ETF one;
+2. From 0.25 to 3 years, especially for higher number of stocks considered, the performance of the stock investment gets worse.
+
+Overall, the "ETF and chill" strategy seems far superior: by investing in a single financial tool you always get a higher probability of having higher returns, without being affected by the crazy volatility that characterize an investment in stocks (especially true for lower nr_stocks or nr_years values).
+In my opinion, the (relatively) good performance of the stock investments for portfolio of moderate sizes (top/top-left part of the plot) are due to the higher effect of high-growth stocks/bullish market conditions on the returns. This is even truer for a shorter investment period: as time goes on, this "high-growth" effect seems to get more and more subtle, ultimately leading to bigger sized portfolios on > nr_years having a risk profile approaching the ETF one (slightly better performance in the lower-right part of the plot). This very last phenomenon might be also due to point 3 from the previous section: to sum it up, I am picking the better performing stocks, especially for higher values of nr_years.
+
+Once again, it is worth noticing that this is not the optimal setup for the ETFs, since they perform in a better way on longer time periods. Nonetheless, they outperform stocks, which is even more impressive since I did not model [the risk of companies being delisted](###### This analysis favors stocks).
+##### Probability of returns being negative
+# PIC 3
+# PIC 4
+
+The heatmaps from this section show the probability the investment returns are negative in all the simulations settings. Just to be clear, "negative" means the investment returned an amount of money < than 1000 euros, the initial investment.
+
+First and foremost, even though the color scale on the two plots might make the probability ranges look similar, the worst values in the ETF plot are green in the stocks one, meaning that the best values in the stocks plot (deep green) are in the order of the worst ones in the ETF heatmap (deep red). This is due to the nature of the financial tools which we simulated our investment on: an ETF diversifies and reduces volatility, sort of "capping" max and min returns. A stock investment offers, potentially, higher returns, the point is that higher rewards mean higher risks, thus there is a higher probability of getting lower returns as well compared to the ETF investment.
+
+Overall, the higher the number of years an investment is made on, the lower the probability of it "being negative" and this might be due to the same two reasons justifying the good performance of the lower-right part of [the previous heatmap](##### Probability stock returns > ETF returns) (on > nr_years, the risk profile of bigger sized portfolios get similar to the ETFs one and I picked the very best stocks when simulating, especially on > nr_years). 
+Interestingly, the higher the number of stocks, the worse the performance of the stock investment seems to get, possibly because equally weighing the investment on a higher number of stocks might be dampening the higher returns you get if you go all-in on a smaller number of stocks performing better.  
+Finally, the ETF heatmap shows that, provided you invest on ETFs for at least 3 years, the probability of getting back less money than the one you initially invested is 3% on average: only 3 investments out of 100 get "bad" results in these settings. 
+###### Visualizing the probability distributions: ETFs
+# PIC 5
+The lineplot above displays how many simulations fall in each investment return bin. Each return bin is upper-end inclusive, meaning that finding 600 as an x-axis coordinate is equivalent to considering the (500-600] euros bin. It is worth noticing that return values might be repeated due to the way the simulations were performed.
+
+Overall, 12% of the simulations returned an amount of money < 1000 euros, in accordance with the ETF heatmap from the previous section (where you can roughly average the probabilities you find in the heatmap, since each heatmap box is computed on roughly the same amount of simulations). 
+###### Visualizing the probability distributions: stocks best and worst cases
+# PIC 6
+For better readability, the x-axis ranges from 0 (the theoretical minimum possible investment return) to the maximum amount returned by the ETF investment, even in the case of the stocks plot.
+
+As expected, the difference with respect to the previous plot is striking: this distribution seems normal and centered around 1000, whilst previously the ETF distribution had its maximum frequency at 1100. Furthermore, the "negative" returns values have fairly higher frequencies with respect to what happened with ETFs, confirming what was observed when looking at [these heatmaps](##### Probability of returns being negative).
+
+# PIC 7
+Picking the best and worst cases from the [stocks heatmap](##### Probability of returns being negative), we can visualize and compare their distribution with respect to the one referring to the whole df (black). 
+In the green best case [(9 stocks, 5 years of investments)](##### Probability of returns being negative), the probability distribution looks fairly more spread out than in the red worst one [(13 stocks, 2 years of investments)](##### Probability of returns being negative). These distributions are, as expected, respectively better and worse than the black line when visually considering the probability of returns being negative. 
+Looking at the red worst curve, it is centered around 800 and most of the higher frequencies are found in the negative part of it. On the other hand, the best curve shows lower frequencies in the negative part of the chart while displaying fairly higher ones in the positive part of it.
+##### ETFs vs stocks: comparing best and worst performances
+# PIC 8
+
+Note well: for the sake of the analysis, the best and worst returns values are not repeated.
+
+The four scatterplots above shine a light on the difference between the financial tools we are considering and confirm, once again, what was stated in the previous sections: stocks offer higher returns, but higher returns come with higher risks.
+As it is possible to see on the bottom right scatterplot (**according to which I actually became millionaire one time out of 5 millions simulations!!!**), it is true that stocks offer higher returns, but the cost we pay is a **worse worst case**: comparing worst performances of both ETFs and stocks, we see that, investing 1000 euros, we get 488 euros in the worst case when we invest in ETFs. With stocks, we can lose almost all our investment, getting back just 7 euros.
+#### Possible future developments
+As in the previous projects, I do think that the code I wrote to perform the simulations might still be optimized, possibly allowing me to simulate returns on higher values of nr_years and nr_stocks. 
+Furthermore, I think it would be cool to integrate an investment taxation section into my code, computing the amount of taxes an investor has to pay when getting money back, allowing me to compute the "real" returns of the investment.
+#### Sources
+- `The data regarding ETFs (i.e. world indices) come from Paolo Coletti's Github. The data about stocks from yahoo_finance.`
 
 
 
