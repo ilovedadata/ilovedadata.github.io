@@ -1,5 +1,7 @@
 # Hi everyone 👋, I am ilovedadata, I am a developer and I LOVE diving into data and programming 💻.
-This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️. [Wanna loop through some cool plots?](#plotnr1) 
+This website is about some of the projects that I completed and the skills that I learnt in my **neverending** journey to become a better dev✌️. 
+- [Wanna loop through some cool plots?](#plotnr1) 
+- [Wanna look at my apps?](http://myrnghustle.streamlit.app)
 
 # Index
 * [A powerball simulator](#italian-superball-simulator-) 
@@ -8,7 +10,7 @@ This website is about some of the projects that I completed and the skills that 
 * [My take on an introduction to statistical learning](#my-take-on-an-introduction-to-statistical-learning)
 * [My solutions to a (pretty challenging) 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * I'm often studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
-* [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F)
+* [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F) ▶️ I deployed an app 👉 [here](http://myrnghustle.streamlit.app)
 * 💥NEW💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator-)
 
 # Italian Superball simulator 💸 
@@ -697,6 +699,8 @@ Excitingly, the optimization reduced the simulation times by A LOT. This is show
 It is true that creating the df for a nn-montecarlo simulation takes more than it does in a normal setting, but I think that the time savings in the simulation part of the process are astonishing nonetheless (and let me stress, once again, that the nn misclassified just 11 instances out of 54k on the test set, so it is pretty accurate). 
 #### Possible future developments
 As stated in the powerball project, the structures and scripts used in this project can possibly be used in the future to simulate other kinds of gamble games/casino games. Furthermore, the functions I wrote to perform "normal" montecarlo simulations might still be optimized, thus time taken to perform the simulations might decrease again. The same can be said about the df creation part of the nn simulations: optimizing data storage might decrease the overall simulation time even more!
+#### UPDATE: actual (😏) future developments
+Developing further what I created for this project, I was able to deploy [a streamlit app](http://myrnghustle.streamlit.app) that performs montecarlo simulations both in 5-card and in Texas Hold'em Poker. You can choose a **lot** of parameters for the simulations and it is pretty fun. You can even compare the "algorithmical" score predictions with the ones made by a Neural Network. Of course, there are some cool plots you will be thrilled to look at!
 #### Sources
 - `The data regarding 5-card and Texas hold'em probabiities come from Wikipedia`
 
