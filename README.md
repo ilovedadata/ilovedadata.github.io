@@ -11,8 +11,8 @@ This website is about some of the projects that I completed and the skills that 
 * [My solutions to a (pretty challenging) 8 week SQL challenge](https://github.com/ilovedadata/8-Week-SQL-Challenge)
 * I'm often studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F) ▶️ 💥NEW💥 I deployed an app 👉 [here](http://myrnghustle.streamlit.app)
-* 💥NEW💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator-)
-* Some quick notes about * [Visualizing Gradient Descent](#visualizing-gradient-descent) ▶️ 💥NEW💥 I deployed an app 👉 [here](http://myrnghustle.streamlit.app)
+* [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator-)
+* Some quick notes about [Visualizing Gradient Descent](#visualizing-gradient-descent) ▶️ 💥NEW💥 I deployed an app 👉 [here](http://myrnghustle.streamlit.app)
 
 # Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
