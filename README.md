@@ -961,7 +961,7 @@ In the same way, the theta parameters were stored in a vector like the following
     | …  |
     | θᵢ₋₁ |
 
-Surprisingly, this is almost all that is needed to get to the minimum of our cost function, all that is left it to consider the gradient descent formula:
+Surprisingly, this is almost all that is needed to get to the minimum of our cost function, all that is left is to consider the gradient descent formula:
 
 $\theta_i = \theta_i - \eta \cdot \frac{\partial J(\theta)}{\partial \theta_i}$
 
@@ -976,17 +976,11 @@ All in all, what the simulations do is computing the result from the formula abo
 #### Considered cost functions and MSE appreciation 
 During the simulations, I considered four losses: the logcosh, the MAE, the huber loss (note: $delta = y_i - \hat{y}_i$ in huber loss) and the MSE. Below their (linear) formulas:
 
-$L_{\text{logcosh}} = \frac{1}{n} \sum_{i=1}^{n} \log(\cosh(\hat{y}_i - y_i))$
-
-$L_{\text{MAE}} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$
-
-$L_{\text{Huber}}(\delta) = \frac{1}{2} \delta^2$ or $L_{\text{Huber}}(\delta) = \delta_0 (|\delta| - \frac{1}{2} \delta_0)$ depending on whether $δ$ <= or > $δ_0$
-
-$L_{\text{MSE}} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
+![costfuncs](https://github.com/user-attachments/assets/915307c0-e7a1-4eea-94fc-4fc57810cb98)
 
 In all the formulas above, the $θ_i$ are hidden within $\hat{y}$. 
 
-As it is evident from the plots you obtain when using the app, MSE seems to have a somewhat sped up convergence, but why is that good? Taking the derivative of the four loss functions the reason is clear: the MSE derivative is the only one that is linearly proportional to the error term $y_i - \hat{y}_i$ everywhere, with bigger errors producing bigger gradients, thus bigger step sizes, thus faster convergence.
+As it is evident from the plots you obtain when using the app, MSE seems to have a somewhat sped up convergence, but why does it perform _that_ good? Taking the derivative of the four loss functions the reason is clear: the MSE derivative is the only one that is **linearly proportional to the error term $y_i - \hat{y}_i$ everywhere**, with bigger errors producing bigger gradients, thus bigger step sizes, thus faster convergence.
 
 
 
