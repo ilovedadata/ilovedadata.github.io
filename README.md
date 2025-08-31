@@ -946,6 +946,7 @@ I want to stress that parameters can be updated within the same simulation, in a
 Even though at the beginning of the project I tackled on a much simpler linear regression case in 2D ( $θ_0$,  $θ_1$), I challenged myself to use matrices in order to estimate more than 2 parameters at a time (up to 10 different thetas at a time are currently estimated, theoretically it could be possible to estimate even more of them but I capped them at 10 for simulation and plotting performance).
 
 In order to use more than two dimensions in my simulations, I set up the observations in a (batch_size, nr_features) shaped matrix where, to put it simply, each column contains the observations relative to a given independent variable.
+
 X = | x₀₁  x₁₁  ...  xᵢ₋₁₁ |
     | x₀₂  x₁₂  ...  xᵢ₋₁₂ |
     | x₀₃  x₁₃  ...  xᵢ₋₁₃ |
@@ -953,6 +954,7 @@ X = | x₀₁  x₁₁  ...  xᵢ₋₁₁ |
     | x₀ₙ  x₁ₙ  ...  xᵢ₋₁ₙ |
 
 In the same way, the theta parameters were stored in a vector like the following:
+
 θ = | θ₀ |
     | θ₁ |
     | θ₂ |
