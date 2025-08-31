@@ -12,6 +12,7 @@ This website is about some of the projects that I completed and the skills that 
 * I'm often studying (Hard) algorithms and data structures. Take a sneak peek at my code 👉 [here](https://github.com/ilovedadata/My-take-on-leetcode-blind-75)
 * [Accelerating montecarlo simulations using neural networks](#speeding-up-montecarlo-simulations-using-neural-networks-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F) ▶️ 💥NEW💥 I deployed an app 👉 [here](http://myrnghustle.streamlit.app)
 * 💥NEW💥 [Rolling the dice on Wall Street: building and optimizing a portfolio simulator](#building-and-optimizing-a-portfolio-simulator-)
+* Some quick notes about * [Visualizing Gradient Descent](#visualizing-gradient-descent) ▶️ 💥NEW💥 I deployed an app 👉 [here](http://myrnghustle.streamlit.app)
 
 # Italian Superball simulator 💸 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Matplotlib` `#Statistics` `#Probability` `#Random`
@@ -707,7 +708,7 @@ Developing further what I created for this project, I was able to deploy [a stre
 # Building and optimizing a portfolio simulator 💵🎢 
 `#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#Polars` `#Matplotlib` `#Statistics` `#Probability` `#Random` `#Seaborn` 
 
-[Index](#index) | 
+[Index](#index) | [Next project](#visualizing-gradient-descent)
 #### Project description and goal
 This project was used as an excuse to become more proficient in using Polars. In particular, I used this library to optimize as much as possible a simulation loop, so as to perform as many simulations as I could in a given amount of time. 
 This idea was born whilst re-creating from the ground up an analysis by Paolo Coletti: as it often happens to me with novel ideas, I created something new and I ended up in a totally different direction from the one I thought I would. Nontheless, I hope this project will interest the reader as much as it interested me (honestly, I think this one turned out to be pretty cool!). 
@@ -924,6 +925,66 @@ As in the previous projects, I do think that the code I wrote to perform the sim
 Furthermore, I think it would be cool to integrate an investment taxation section into my code, computing the amount of taxes an investor has to pay when getting money back, allowing me to compute the "real" returns of the investment.
 #### Sources
 - `The data regarding ETFs (i.e. world indices) come from Paolo Coletti's Github. The data about stocks from yahoo_finance.`
+
+# Visualizing Gradient Descent 
+## Some quick notes
+`#Python` `#DataScience` `#DataAnalysis` `#Numpy` `#Pandas` `#MachineLearning` `#Mathematics` `#Streamlit` 
+
+[Index](#index) | 
+#### Project goal and set up
+This project goal was to help the user (and me!) visualize what happens during Gradient Descent, whose goal is to minimize a cost function. 
+
+To do so, I considered a Linear Regression fitted on multiple independent variables, whose $θ_i$ were estimated in an iterative way. During a gradient descent using my app, the user can change all the parameters characterizing the simulations, namely:
+- ❌ The number of independent variables;
+- 🧐 The number of training instances;
+- 🧠 The learning rate;
+- 🔂 The number of epochs;
+- ⛷️ The kind of gradient descent.
+
+I want to stress that parameters can be updated within the same simulation, in a smooth way, that does NOT cause the code to crash. To achieve so, Streamlit flow control was used together with a good amount of patience from my side, especially when dealing with a changing number of variables (whoever dealt with matrices in his life knows that dot products require matrices to be of a specific shape, so imagine having a user changing your matrix shape whilst simulating --> headache).
+#### Simulation matrices and cool math
+Even though at the beginning of the project I tackled on a much simpler linear regression case in 2D ( $θ_0$,  $θ_1$), I challenged myself to use matrices in order to estimate more than 2 parameters at a time (up to 10 different thetas at a time are currently estimated, theoretically it could be possible to estimate even more of them but I capped them at 10 for simulation and plotting performance).
+
+In order to use more than two dimensions in my simulations, I set up the observations in a (batch_size, nr_features) shaped matrix where, to put it simply, each column contains the observations relative to a given independent variable.
+X = | x₀₁  x₁₁  ...  xᵢ₋₁₁ |
+    | x₀₂  x₁₂  ...  xᵢ₋₁₂ |
+    | x₀₃  x₁₃  ...  xᵢ₋₁₃ |
+    | ...  ...  ...  ...  ...   |
+    | x₀ₙ  x₁ₙ  ...  xᵢ₋₁ₙ |
+
+In the same way, the theta parameters were stored in a vector like the following:
+θ = | θ₀ |
+    | θ₁ |
+    | θ₂ |
+    | …  |
+    | θᵢ₋₁ |
+
+Surprisingly, this is almost all that is needed to get to the minimum of our cost function, all that is left it to consider the gradient descent formula:
+
+$\theta_i = \theta_i - \eta \cdot \frac{\partial J(\theta)}{\partial \theta_i}$
+
+where $θi$ is the parameter being updated, $η$ is the learning rate and $J(θ)$ is the cost function.
+
+For matrices this becomes:
+
+$\theta_i \leftarrow \theta_i - \eta \cdot \nabla_{\theta_i}$
+
+All in all, what the simulations do is computing the result from the formula above for each of the $θi$, for all the epochs the user gave as an input parameter. In the end, the cost function will be (hopefully) minimized and the theta parameters will be correctly estimated (a stubborn kid, i.e. me, once asked: why is minimizing the cost function equal to correctly estimating $θi$? Because minimizing a cost function means your model makes good predictions, and to make good predictions your model needs to accurately estimate $θi$). 
+
+#### Considered cost functions and MSE appreciation 
+During the simulations, I considered four losses: the logcosh, the MAE, the huber loss (note: $delta = y_i - \hat{y}_i$ in huber loss) and the MSE. Below their (linear) formulas:
+
+$L_{\text{logcosh}} = \frac{1}{n} \sum_{i=1}^{n} \log(\cosh(\hat{y}_i - y_i))$
+
+$L_{\text{MAE}} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$
+
+$L_{\text{Huber}}(\delta) = \frac{1}{2} \delta^2$ or $L_{\text{Huber}}(\delta) = \delta_0 (|\delta| - \frac{1}{2} \delta_0)$ depending on wherer $δ$ <= or > $δ_0$
+
+$L_{\text{MSE}} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
+
+In all the formulas above, the $θ_i$ are hidden within $\hat{y}$. 
+
+As it is evident from the plots you obtain when using the app, MSE seems to have a somewhat sped up convergence, but why is that good? Taking the derivative of the four loss functions the reason is clear: the MSE derivative is the only one that is linearly proportional to the error term $y_i - \hat{y}_i$ everywhere, with bigger errors producing bigger gradients, thus bigger step sizes, thus faster convergence.
 
 
 
