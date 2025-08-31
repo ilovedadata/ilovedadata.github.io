@@ -980,7 +980,7 @@ $L_{\text{logcosh}} = \frac{1}{n} \sum_{i=1}^{n} \log(\cosh(\hat{y}_i - y_i))$
 
 $L_{\text{MAE}} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$
 
-$L_{\text{Huber}}(\delta) = \frac{1}{2} \delta^2$ or $L_{\text{Huber}}(\delta) = \delta_0 (|\delta| - \frac{1}{2} \delta_0)$ depending on wherer $δ$ <= or > $δ_0$
+$L_{\text{Huber}}(\delta) = \frac{1}{2} \delta^2$ or $L_{\text{Huber}}(\delta) = \delta_0 (|\delta| - \frac{1}{2} \delta_0)$ depending on whether $δ$ <= or > $δ_0$
 
 $L_{\text{MSE}} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
 
